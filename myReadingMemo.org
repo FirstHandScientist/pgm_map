@@ -1,0 +1,39 @@
+#+TITLE: My reading memo
+#+LATEX_COMPILER: pdflatex
+#+options: toc:nil
+* Record of reading
+ 
+** Causal Inference
+   cite:pearl2018theoretical explains the theoretical limits of current
+   state-of-art machine learning that are mostly based on statistical methods.
+
+   
+
+** The Probabilistic Graphical Models
+   Chapter~15 introduce Bayesian Networks, undirected graphical models/Markov random field, factor graph, and message-passing algorithms including sum-product and max-product.cite:theodoridis2015machine. 
+   
+*** TODO Check *normal factor graph*, a variant of the factor graphs has been recently introduced, where edges represent variables and vertices represent factors.
+*** TODO Max-product and Max-sum, could be used to detect input signal structures, such as location of objects in pictures. 
+*** TODO Could the back-tracking be combined with two-direction message flowing, in order to get optima of input signal?
+
+** Interpretable Methods and Explanations
+   A general framework for learning different kinds of explanations for black box algorithms is proposed and experimentedcite:fong2017interpretable.
+   Google's interpretability tool: [[https://github.com/tensorflow/lucid][lucid@github]].
+
+
+
+
+
+
+
+
+
+
+   
+
+   
+    
+* Reference
+bibliographystyle:unsrt  
+bibliography:mLearningMemo.bib   
+
