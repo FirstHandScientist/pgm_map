@@ -1,27 +1,22 @@
 # GANs
 
-## TODO Tse/ minmax problem:
+## Tse/ minmax problem:
 
 1.  robust linear clissifier + feature mapping: for robustness against noise and attack
 
 2.  Minmax learning for remote prediction, find the connection to anto-encoder and GAN, do information bottleneck work, try to see (mutual information estimation in estimation information flow in DNN helps or not)
 
-## TODO ROBUST probability learning, try to use measure that is robust to noisy samples or outlier, such as beta-estimation, beta divergence, useVAE do the generator may solve the probability of g
+## ROBUST probability learning
 
-### TODO Does current design EOT-GAN help robust classification design/large-scale imaginary classification/ semi-supervised learning?
+1.  try to use measure that is robust to noisy samples or outlier, such as beta-estimation, beta divergence, useVAE do the generator may solve the probability of g
 
-## TODO Coverlutional lay bounded design, for lipschitz property
+## Current design EOT-GAN help robust classification design/large-scale imaginary classification/ semi-supervised learning?
+
+## Coverlutional lay bounded design, for lipschitz property
 
 <del>First step for the reference(random circulate coverlutional matrix), see if useful</del>
 
-## TODO Discrete GAN or RBM or Autoencoder
-
-# Record of reading
-
-## Causal Inference
-
-<sup id="ebbae5f70288dc30ee111f6185f56769"><a href="#pearl2018theoretical" title="Pearl, Theoretical Impediments to Machine Learning With Seven Sparks from the Causal Revolution, {arXiv preprint arXiv:1801.04016}, v(), (2018).">pearl2018theoretical</a></sup> explains the theoretical limits of current
-state-of-art machine learning that are mostly based on statistical methods.
+## Discrete GAN or RBM or Autoencoder
 
 # Bayesian
 
@@ -76,12 +71,19 @@ Imitating human recognition process, when class label is given, features of this
 
 3.  2. In batch data feeding procedure, use generative models to generate relevant pseodo-input data, manipulate this percentage consist. (I think I can test it on CNN algorithms first)
 
+# Record of reading
+
+## Causal Inference
+
+<sup id="ebbae5f70288dc30ee111f6185f56769"><a href="#pearl2018theoretical" title="Pearl, Theoretical Impediments to Machine Learning With Seven Sparks from the Causal Revolution, {arXiv preprint arXiv:1801.04016}, v(), (2018).">pearl2018theoretical</a></sup> explains the theoretical limits of current
+state-of-art machine learning that are mostly based on statistical methods.
+
 # Reference
 
 
 # Bibliography
-<a id="pearl2018theoretical"></a>[pearl2018theoretical] Pearl, Theoretical Impediments to Machine Learning With Seven Sparks from the Causal Revolution, <i>{arXiv preprint arXiv:1801.04016}</i>, <b>()</b>, (2018). <a href="">link</a>. <a href="http://dx.doi.org/">doi</a>. [↩](#ebbae5f70288dc30ee111f6185f56769)
-
 <a id="theodoridis2015machine"></a>[theodoridis2015machine] Theodoridis, Machine learning: a Bayesian and optimization perspective, Academic Press (2015). [↩](#46925c57259dfc7c3b5f0d20747e4ba7)
 
 <a id="fong2017interpretable"></a>[fong2017interpretable] Fong \& Vedaldi, Interpretable explanations of black boxes by meaningful perturbation, <i>{arXiv preprint arXiv:1704.03296}</i>, <b>()</b>, (2017). <a href="">link</a>. <a href="http://dx.doi.org/">doi</a>. [↩](#669be089a35564ac92c6144f7d35dd91)
+
+<a id="pearl2018theoretical"></a>[pearl2018theoretical] Pearl, Theoretical Impediments to Machine Learning With Seven Sparks from the Causal Revolution, <i>{arXiv preprint arXiv:1801.04016}</i>, <b>()</b>, (2018). <a href="">link</a>. <a href="http://dx.doi.org/">doi</a>. [↩](#ebbae5f70288dc30ee111f6185f56769)
