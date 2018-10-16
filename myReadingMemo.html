@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>My reading memo</title>
-<!-- 2018-03-26 Mon 13:57 -->
+<title>Mind palace</title>
+<!-- 2018-10-16 Tue 21:16 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Dong" />
@@ -137,47 +137,128 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">My reading memo</h1>
+<h1 class="title">Mind palace</h1>
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Record of reading</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> GANs</h2>
 <div class="outline-text-2" id="text-1">
 </div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Causal Inference</h3>
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> <span class="todo TODO">TODO</span> Tse/ minmax problem:</h3>
 <div class="outline-text-3" id="text-1-1">
+<ol class="org-ol">
+<li>robust linear clissifier + feature mapping: for robustness against noise and attack
+</li>
+
+<li>Minmax learning for remote prediction, find the connection to anto-encoder and GAN, do information bottleneck work, try to see (mutual information estimation in estimation information flow in DNN helps or not)
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> <span class="todo TODO">TODO</span> ROBUST probability learning, try to use measure that is robust to noisy samples or outlier, such as beta-estimation, beta divergence, useVAE do the generator may solve the probability of g</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> <span class="todo TODO">TODO</span> Does current design EOT-GAN help robust classification design/large-scale imaginary classification/ semi-supervised learning?</h4>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> <span class="todo TODO">TODO</span> Coverlutional lay bounded design, for lipschitz property</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>First step for the reference(random circulate coverlutional matrix), see if useful 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> <span class="todo TODO">TODO</span> Discrete GAN or RBM or Autoencoder</h3>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Record of reading</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Causal Inference</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 <a class='org-ref-reference' href="#pearl2018theoretical">pearl2018theoretical</a> explains the theoretical limits of current
 state-of-art machine learning that are mostly based on statistical methods.
 </p>
 </div>
 </div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Bayesian</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> EP</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> <span class="todo TODO">TODO</span> eplace gaussian assumption with graphic model, optimize it as least as good as gaussian</h4>
+</div>
+</div>
 
 
-
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2"><span class="section-number-3">1.2</span> The Probabilistic Graphical Models</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> The Probabilistic Graphical Models</h3>
+<div class="outline-text-3" id="text-3-2">
 <p>
 Chapter~15 introduce Bayesian Networks, undirected graphical models/Markov random field, factor graph, and message-passing algorithms including sum-product and max-product.<a class='org-ref-reference' href="#theodoridis2015machine">theodoridis2015machine</a>. 
 </p>
 </div>
 
-<div id="outline-container-sec-1-2-1" class="outline-4">
-<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> <span class="todo TODO">TODO</span> Check <b>normal factor graph</b>, a variant of the factor graphs has been recently introduced, where edges represent variables and vertices represent factors.</h4>
+<div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> <span class="todo TODO">TODO</span> Check <b>normal factor graph</b>, a variant of the factor graphs has been recently introduced, where edges represent variables and vertices represent factors.</h4>
 </div>
-<div id="outline-container-sec-1-2-2" class="outline-4">
-<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> <span class="todo TODO">TODO</span> Max-product and Max-sum, could be used to detect input signal structures, such as location of objects in pictures.</h4>
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> <span class="todo TODO">TODO</span> Max-product and Max-sum, could be used to detect input signal structures, such as location of objects in pictures.</h4>
 </div>
-<div id="outline-container-sec-1-2-3" class="outline-4">
-<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> <span class="todo TODO">TODO</span> Could the back-tracking be combined with two-direction message flowing, in order to get optima of input signal?</h4>
+<div id="outline-container-sec-3-2-3" class="outline-4">
+<h4 id="sec-3-2-3"><span class="section-number-4">3.2.3</span> <span class="todo TODO">TODO</span> Could the back-tracking be combined with two-direction message flowing, in order to get optima of input signal? How to find the optima in just two-direction message flowing? May should also pay attention to the hardware requirement(such as memory cost in message-passing inference).</h4>
+</div>
+<div id="outline-container-sec-3-2-4" class="outline-4">
+<h4 id="sec-3-2-4"><span class="section-number-4">3.2.4</span> <span class="todo TODO">TODO</span> Back-tracking based method for cause input signal identification? Is it possible that after back-tracking, then try to reLearn the input nearby causal input signal? To improve the detection procession?</h4>
+</div>
+<div id="outline-container-sec-3-2-5" class="outline-4">
+<h4 id="sec-3-2-5"><span class="section-number-4">3.2.5</span> <span class="todo TODO">TODO</span> redundant part signal of input detection? If the redundant part can be identified, the input can be simplified (accelerate the prediction speed?), or the pre-process transformation of input can be identified analytically and then be implied before each detection?</h4>
+</div>
+
+<div id="outline-container-sec-3-2-6" class="outline-4">
+<h4 id="sec-3-2-6"><span class="section-number-4">3.2.6</span> <span class="todo TODO">TODO</span> Grouping the different parts of output signal, stop errors back-propagating to irrelevant input parts? This can also be benefited when the causal-output decision relationship is made.</h4>
+</div>
+
+<div id="outline-container-sec-3-2-7" class="outline-4">
+<h4 id="sec-3-2-7"><span class="section-number-4">3.2.7</span> <span class="todo TODO">TODO</span> What is the discrimination dimension of overlaying typical activation functions into complex form, for given dimension of input?</h4>
+</div>
+
+<div id="outline-container-sec-3-2-8" class="outline-4">
+<h4 id="sec-3-2-8"><span class="section-number-4">3.2.8</span> <span class="todo TODO">TODO</span> Is there metrics as replacement of loss function to better get the causal-output relationship?</h4>
 </div>
 </div>
 
-<div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Interpretable Methods and Explanations</h3>
-<div class="outline-text-3" id="text-1-3">
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Interpretable Methods and Explanations</h3>
+<div class="outline-text-3" id="text-3-3">
 <p>
 A general framework for learning different kinds of explanations for black box algorithms is proposed and experimentedcite:fong2017interpretable.
 Google's interpretability tool: <a href="https://github.com/tensorflow/lucid">lucid@github</a>.
+</p>
+</div>
+
+<div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> <span class="todo TODO">TODO</span> Use lucid to study the inference propagation over CNN or its variants</h4>
+</div>
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> <span class="todo TODO">TODO</span> What is the relationship between salience map and neural network sparsity.</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+<a class='org-ref-reference' href="#fong2017interpretable">fong2017interpretable</a> proposes two test rules for leanring/inference algorithms: 1. classification itself 2. rotation perturbation on input. Regulation formulas are proposed. Deletion, noise and bluring on input images are experimented and discussed.
 </p>
 </div>
 </div>
@@ -187,23 +268,45 @@ Google's interpretability tool: <a href="https://github.com/tensorflow/lucid">lu
 
 
 
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Inference and generative models</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Imitating human recognition process, when class label is given, features of this class label is generated in mind and then compared to the input data x, to see of which class it belongs to?    
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Bayesian Learning</h3>
+<div class="outline-text-3" id="text-3-5">
+</div><div id="outline-container-sec-3-5-1" class="outline-4">
+<h4 id="sec-3-5-1"><span class="section-number-4">3.5.1</span> <span class="todo TODO">TODO</span> Use Occam rule to balance the generalization and accuracy of algorithms and accuracy. A specific problem here could be to use this rule to get the best stacked ELM structures. May be it is interesting to link the regulation parameter lambda with Occam rule.</h4>
+</div>
+
+<div id="outline-container-sec-3-5-2" class="outline-4">
+<h4 id="sec-3-5-2"><span class="section-number-4">3.5.2</span> <span class="todo TODO">TODO</span> Use EM philosophy to design the generalizing ability of inference. EM can handle the missing data case. Thus it is possible to embed this into inference algorithm design, by taking missing data as future data for prediction:</h4>
+<div class="outline-text-4" id="text-3-5-2">
+</div><ol class="org-ol"><li><a id="sec-3-5-2-1" name="sec-3-5-2-1"></a>1. assuming the joint possible distribution, then embed it for training<br  /></li>
+<li><a id="sec-3-5-2-2" name="sec-3-5-2-2"></a>1*. joint distribution in most cases is not available, try Monte Carlo?<br  /></li>
+<li><a id="sec-3-5-2-3" name="sec-3-5-2-3"></a>2. In batch data feeding procedure, use generative models to generate relevant pseodo-input data, manipulate this percentage consist. (I think I can test it on CNN algorithms first)<br  /></li></ol>
+</div>
+</div>
+</div>
 
 
 
 
-
-
-
-
-
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Reference</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Reference</h2>
+<div class="outline-text-2" id="text-4">
 <p>
   
 <h1 class='org-ref-bib-h1'>Bibliography</h1>
 <ul class='org-ref-bib'><li><a id="pearl2018theoretical">[pearl2018theoretical]</a> <a name="pearl2018theoretical">Pearl, Theoretical Impediments to Machine Learning With Seven Sparks from the Causal Revolution, <i>arXiv preprint arXiv:1801.04016</i>, <b></b>, (2018).</li>
 <li><a id="theodoridis2015machine">[theodoridis2015machine]</a> <a name="theodoridis2015machine">Theodoridis, Machine learning: a Bayesian and optimization perspective, Academic Press (2015).</li>
+<li><a id="fong2017interpretable">[fong2017interpretable]</a> <a name="fong2017interpretable">Fong & Vedaldi, Interpretable explanations of black boxes by meaningful perturbation, <i>arXiv preprint arXiv:1704.03296</i>, <b></b>, (2017).</li>
 </ul>   
 </p>
 </div>
@@ -211,8 +314,8 @@ Google's interpretability tool: <a href="https://github.com/tensorflow/lucid">lu
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Dong</p>
-<p class="date">Created: 2018-03-26 Mon 13:57</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="date">Created: 2018-10-16 Tue 21:16</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.2 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
