@@ -11,7 +11,7 @@
 *** TODO Does current design EOT-GAN help robust classification design/large-scale imaginary classification/ semi-supervised learning?
 
 ** TODO Coverlutional lay bounded design, for lipschitz property
-   + First step for the reference(random circulate coverlutional matrix), see if useful
+   +First step for the reference(random circulate coverlutional matrix), see if useful+
 ** TODO Discrete GAN or RBM or Autoencoder
 
 
