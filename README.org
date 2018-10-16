@@ -6,7 +6,7 @@
 1. robust linear clissifier + feature mapping: for robustness against noise and attack
 
 2. Minmax learning for remote prediction, find the connection to anto-encoder and GAN, do information bottleneck work, try to see (mutual information estimation in estimation information flow in DNN helps or not)
-   
+3. Find OT distance in pix space and feature space, what is the condition for the eqvilence? then use ot upper bound to try the minmax problem... target: extend the problem into general case, not just linear dicision rule.
 ** ROBUST probability learning
 
 1. try to use measure that is robust to noisy samples or outlier, such as beta-estimation, beta divergence, useVAE do the generator may solve the probability of g
