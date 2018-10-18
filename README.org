@@ -1,6 +1,7 @@
 #+TITLE: Mind palace
 #+LATEX_COMPILER: pdflatex
 #+options: toc:nil
+
 * GANs
 ** Tse/ minmax problem:
 1. robust linear clissifier + feature mapping: for robustness against noise and attack
@@ -21,6 +22,9 @@
 
    
 * Bayesian
+
+** Bayesian ELBO
+   generative mode, adversarial optimization, optimize both the bonds and also the gap, is that possible???
 
 ** EP
 
