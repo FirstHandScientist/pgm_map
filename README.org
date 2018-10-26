@@ -1,9 +1,9 @@
 #+TITLE: Mind palace
 #+LATEX_COMPILER: pdflatex
-#+options: toc:nil
+#+options: toc:t
 
 * GANs
-** Tse/ minmax problem:
+** minmax problem:
 1. robust linear clissifier + feature mapping: for robustness against noise and attack
 
 2. Minmax learning for remote prediction, find the connection to anto-encoder and GAN, do information bottleneck work, try to see (mutual information estimation in estimation information flow in DNN helps or not)
@@ -20,6 +20,11 @@
 
 ** Discrete GAN or RBM or Autoencoder
 
+** OT autoencoder
+OT is equivalent or leq than autoencoder structured autoencoder:
+1. consider the concatenation/progressive adding more mapping. See if each concatenation has complexity reduction, error bounding... $W(P_X,P_Y) \leq W(P_X, G1(Z1)) \leq W(X, G2(Z2)) \leq \cdots$
+2. $W(P_X,P_Y) \leq W(P_X, G2(Z2)) \leq W(G1(Z1), G2(Z2))$, i.e. do alternative mapping twice, what is the benefits of solving $W(G1(Z1), G2(Z2))$.
+
    
 * Bayesian
 
@@ -28,31 +33,44 @@
 
 ** EP
 
-*** TODO replace gaussian assumption with graphic model, optimize it as least as good as gaussian
+replace gaussian assumption with graphic model, optimize it as least as good as gaussian
+
+
+
+** EM
+ Use EM philosophy to design the generalizing ability of inference. EM can handle the missing data case. Thus it is possible to embed this into inference algorithm design, by taking missing data as future data for prediction:
+**** 1. assuming the joint possible distribution, then embed it for training
+**** 1*. joint distribution in most cases is not available, try Monte Carlo?
+**** 2. In batch data feeding procedure, use generative models to generate relevant pseodo-input data, manipulate this percentage consist. (I think I can test it on CNN algorithms first)
+
+     
+
+** Occam rule
+Use Occam rule to balance the generalization and accuracy of algorithms and accuracy. A specific problem here could be to use this rule to get the best stacked ELM structures. May be it is interesting to link the regulation parameter lambda with Occam rule.
 
 
 ** The Probabilistic Graphical Models
    Chapter~15 introduce Bayesian Networks, undirected graphical models/Markov random field, factor graph, and message-passing algorithms including sum-product and max-product.cite:theodoridis2015machine.
 
-*** TODO Check *normal factor graph*, a variant of the factor graphs has been recently introduced, where edges represent variables and vertices represent factors.
-*** TODO Max-product and Max-sum, could be used to detect input signal structures, such as location of objects in pictures.
-*** TODO Could the back-tracking be combined with two-direction message flowing, in order to get optima of input signal? How to find the optima in just two-direction message flowing? May should also pay attention to the hardware requirement(such as memory cost in message-passing inference).
-*** TODO Back-tracking based method for cause input signal identification? Is it possible that after back-tracking, then try to reLearn the input nearby causal input signal? To improve the detection procession?
-*** TODO redundant part signal of input detection? If the redundant part can be identified, the input can be simplified (accelerate the prediction speed?), or the pre-process transformation of input can be identified analytically and then be implied before each detection?
+1. Check *normal factor graph*, a variant of the factor graphs has been recently introduced, where edges represent variables and vertices represent factors.
+2. Max-product and Max-sum, could be used to detect input signal structures, such as location of objects in pictures.
+3. Could the back-tracking be combined with two-direction message flowing, in order to get optima of input signal? How to find the optima in just two-direction message flowing? May should also pay attention to the hardware requirement(such as memory cost in message-passing inference).
+4. Back-tracking based method for cause input signal identification? Is it possible that after back-tracking, then try to reLearn the input nearby causal input signal? To improve the detection procession?
+5. redundant part signal of input detection? If the redundant part can be identified, the input can be simplified (accelerate the prediction speed?), or the pre-process transformation of input can be identified analytically and then be implied before each detection?
 
-*** TODO Grouping the different parts of output signal, stop errors back-propagating to irrelevant input parts? This can also be benefited when the causal-output decision relationship is made.
+6. Grouping the different parts of output signal, stop errors back-propagating to irrelevant input parts? This can also be benefited when the causal-output decision relationship is made.
 
-*** TODO What is the discrimination dimension of overlaying typical activation functions into complex form, for given dimension of input?
+7. What is the discrimination dimension of overlaying typical activation functions into complex form, for given dimension of input?
 
-*** TODO Is there metrics as replacement of loss function to better get the causal-output relationship?
+8. Is there metrics as replacement of loss function to better get the causal-output relationship?
 
 
-** Interpretable Methods and Explanations
+* Interpretable Methods and Explanations
    A general framework for learning different kinds of explanations for black box algorithms is proposed and experimentedcite:fong2017interpretable.
    Google's interpretability tool: [[https://github.com/tensorflow/lucid][lucid@github]].
 
-*** TODO Use lucid to study the inference propagation over CNN or its variants
-*** TODO What is the relationship between salience map and neural network sparsity.
+1. Use lucid to study the inference propagation over CNN or its variants
+2. What is the relationship between salience map and neural network sparsity.
 
     cite:fong2017interpretable proposes two test rules for leanring/inference algorithms: 1. classification itself 2. rotation perturbation on input. Regulation formulas are proposed. Deletion, noise and bluring on input images are experimented and discussed.
 
@@ -60,19 +78,9 @@
 
 
 
-** Inference and generative models
-   Imitating human recognition process, when class label is given, features of this class label is generated in mind and then compared to the input data x, to see of which class it belongs to?
 
 
 ** Bayesian Learning
-
-*** TODO Use Occam rule to balance the generalization and accuracy of algorithms and accuracy. A specific problem here could be to use this rule to get the best stacked ELM structures. May be it is interesting to link the regulation parameter lambda with Occam rule.
-
-*** TODO Use EM philosophy to design the generalizing ability of inference. EM can handle the missing data case. Thus it is possible to embed this into inference algorithm design, by taking missing data as future data for prediction:
-**** 1. assuming the joint possible distribution, then embed it for training
-**** 1*. joint distribution in most cases is not available, try Monte Carlo?
-**** 2. In batch data feeding procedure, use generative models to generate relevant pseodo-input data, manipulate this percentage consist. (I think I can test it on CNN algorithms first)
-
 
    
 * Record of reading
