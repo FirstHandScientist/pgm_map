@@ -10,6 +10,7 @@
 <li><a href="#sec-1-4">1.4. Coverlutional lay bounded design, for lipschitz property</a></li>
 <li><a href="#sec-1-5">1.5. Discrete GAN or RBM or Autoencoder</a></li>
 <li><a href="#sec-1-6">1.6. OT autoencoder</a></li>
+<li><a href="#sec-1-7">1.7. Wasserstein coreset/ barycenters and Boosting</a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2. Bayesian</a>
@@ -63,6 +64,19 @@
 OT is equivalent or leq than autoencoder structured autoencoder:
 1.  consider the concatenation/progressive adding more mapping. See if each concatenation has complexity reduction, error bounding&#x2026; \(W(P_X,P_Y) \leq W(P_X, G1(Z1)) \leq W(X, G2(Z2)) \leq \cdots\)
 2.  \(W(P_X,P_Y) \leq W(P_X, G2(Z2)) \leq W(G1(Z1), G2(Z2))\), i.e. do alternative mapping twice, what is the benefits of solving \(W(G1(Z1), G2(Z2))\).
+3.  Consider adaboosing for condition of going deeper
+4.  <sup id="a8524115555a6a2efed287e2f5d16ba4"><a href="#NIPS2017_7126" title="@incollection{NIPS2017_7126,
+    title = {AdaGAN: Boosting Generative Models},
+    author = {Tolstikhin, Ilya O and Gelly, Sylvain and Bousquet, Olivier and SIMON-GABRIEL, Carl-Johann and Sch\{o}lkopf, Bernhard},
+    booktitle = {Advances in Neural Information Processing Systems 30},
+    editor = {I. Guyon and U. V. Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+    pages = {5424--5433},
+    year = {2017},
+    publisher = {Curran Associates, Inc.},
+    url = {http://papers.nips.cc/paper/7126-adagan-boosting-generative-models.pdf}
+    }">NIPS2017_7126</a></sup> use beta-divergence for each mixture component generator optimization. This allow a training generator to omit tail samples during training. Empirical samples that are not captured during previous generator training will be put more weight and become high-weight samples for next generator training.
+
+## Wasserstein coreset/ barycenters and Boosting<a id="sec-1-7" name="sec-1-7"></a>
 
 # Bayesian<a id="sec-2" name="sec-2"></a>
 
@@ -127,6 +141,17 @@ state-of-art machine learning that are mostly based on statistical methods.
 
 
 # Bibliography
+<a id="NIPS2017_7126"></a>[NIPS2017_7126] @incollection{NIPS2017_7126,
+title = {AdaGAN: Boosting Generative Models},
+author = {Tolstikhin, Ilya O and Gelly, Sylvain and Bousquet, Olivier and SIMON-GABRIEL, Carl-Johann and Sch\"{o}lkopf, Bernhard},
+booktitle = {Advances in Neural Information Processing Systems 30},
+editor = {I. Guyon and U. V. Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+pages = {5424--5433},
+year = {2017},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/7126-adagan-boosting-generative-models.pdf}
+} [↩](#a8524115555a6a2efed287e2f5d16ba4)
+
 <a id="theodoridis2015machine"></a>[theodoridis2015machine] Theodoridis, Machine learning: a Bayesian and optimization perspective, Academic Press (2015). [↩](#46925c57259dfc7c3b5f0d20747e4ba7)
 
 <a id="fong2017interpretable"></a>[fong2017interpretable] Fong \& Vedaldi, Interpretable explanations of black boxes by meaningful perturbation, <i>{arXiv preprint arXiv:1704.03296}</i>, <b>()</b>, (2017). <a href="">link</a>. <a href="http://dx.doi.org/">doi</a>. [↩](#669be089a35564ac92c6144f7d35dd91)
