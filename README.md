@@ -76,6 +76,8 @@ OT is equivalent or leq than autoencoder structured autoencoder:
     url = {http://papers.nips.cc/paper/7126-adagan-boosting-generative-models.pdf}
     }">NIPS2017_7126</a></sup> use beta-divergence for each mixture component generator optimization. This allow a training generator to omit tail samples during training. Empirical samples that are not captured during previous generator training will be put more weight and become high-weight samples for next generator training.
 
+5.  Use Gaussian random encoder, benefit: the latent divergence with prior (gaussian prior) can be analytically studied.
+
 ## Wasserstein coreset/ barycenters and Boosting<a id="sec-1-7" name="sec-1-7"></a>
 
 # Bayesian<a id="sec-2" name="sec-2"></a>

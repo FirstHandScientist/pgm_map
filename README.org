@@ -1,82 +1,295 @@
 #+TITLE: Mind palace
 #+LATEX_COMPILER: pdflatex
 #+options: toc:t
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
+
+* Bayesian
+** Book and Thesis:
+   
+    > Sutton, 2010, [[https://homepages.inf.ed.ac.uk/csutton/publications/crftut-fnt.pdf][An Introduction to Conditional Random Fields]]
+   
+    > Wainwright, 2008, [[file:~/Documents/my_eBooks/mLearning/graphical_models_wainwright.pdf][Graphical Models, Exponential Families, and Variational Inference]]
+    > Koller, 2009, [[file:~/Documents/my_eBooks/mLearning/probabilistic_graphical_models_principles_techniques.pdf][Probabilistic graphical models: principles and techniques]]
+
+    *Thesis*:
+
+    > Yingzhen Li, 2018, [[https://www.repository.cam.ac.uk/handle/1810/277549][Approximate Inference: New Visions]]
+   
+    > Adrian Weller, 2014, [[http://mlg.eng.cam.ac.uk/adrian/phd_FINAL.pdf][Methods for Inference in Graphical Models]]
+
+    Ihler, Alexander:
+
+    > Lou, Qi, 2018, [[https://escholarship.org/uc/item/7sc0m97f][Anytime Approximate Inference in Graphical Models]]
+
+    > Ping, Wei, 2016, [[https://escholarship.org/uc/item/7q90z4b5][Learning and Inference in Latent Variable Graphical Models]]
+
+    > Forouzan, Sholeh, 2015, [[https://escholarship.org/uc/item/5n4733cz][Approximate Inference in Graphical Models]]
+   
+    > Qiang, Liu, 2014, [[https://escholarship.org/uc/item/92p8w3xb][Reasoning and Decisions in Probabilistic Graphical Models - A Unified Framework]]
+
+    Minka:
+
+    > Yuan Qi, 2005, [[https://affect.media.mit.edu/pdfs/05.qi-phd.pdf][Extending Expectation Propagation for Graphical Models]]
+   
+    > Thomas P Minka, 2001, [[https://tminka.github.io/papers/ep/minka-thesis.pdf][A family of algorithms for approximate Bayesian inference]]
+
+** Inference methods and techniques
+*** COMMENT Partition function estimation by clampping
+    1. Techniques for improving the Inference
+
+       [[http://mlg.eng.cam.ac.uk/pub/pdf/EatGha09.pdf][Choosing a Variable to Clamp]]
+
+       [[http://auai.org/uai2015/proceedings/papers/158.pdf][Locally Conditioned Belief Propagation]]
+
+       [[https://papers.nips.cc/paper/5529-clamping-variables-and-approximate-inference.pdf][Clamping Variables and Approximate Inference]]
+
+       linear response: 
+
+       [[https://www.ics.uci.edu/~welling/publications/papers/LR2.pdf][Linear Response Algorithms for Approximate Inference in Graphical Models]]
+
+       Combining with Particle/Stochastic Inference Methods:
+
+       [[https://papers.nips.cc/paper/5695-probabilistic-variational-bounds-for-graphical-models][Qiang Liu, 2015, Probabilistic Variational Bounds for Graphical Models]]
+
+       Noorshams and Wainwright, 2013, [[https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6373728][stochastic belief propagation: a low-complexity alternative to the sum-product algorithm]]
+
+       Remarks: *Improve the amortized Inference Net for Bethe free energy estimation, will linear response theory or RNN help this problem?*
+
+    2. What do cutset or clamping would do for region-based free energy?
+
+       2.0 how to identify cutset of best variable to clamp?
+
+       2.1 investigate the effect to GBP or EP (or tree structured EP)
+
+       2.2 what its effect to RENN
+
+*** Application Consideration
+
+    3. What will I get by applying the RNN's mean field explanation to RNN augmented Kalman filter?
+
+       Ref1: [[https://papers.nips.cc/paper/9532-combining-generative-and-discriminative-models-for-hybrid-inference.pdf][Satorras, 2019, Combining Generative and Discriminative Models for Hybrid Inference]]
+
+       Ref2: [[https://arxiv.org/pdf/1502.03240.pdf][Zheng, 2019, Conditional Random Fields as Recurrent Neural Networks]]
+
+       Ref3: [[https://arxiv.org/abs/1210.5644][Krahenbuhl, 2011, Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials]]
+
+    4. Can I interpret tree-reweighted RENN as a mixture method of MF, LoopyBP and GBP (or even including TWBP) after convexcify its corresponding hypergraph?
+
+
+*** Classical Inference Methods
+    1. Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP
+
+    2. {{{color(green,Alpha belief propagation)}}}
+
+       {{{color(green, convergence property of Alpha belief propagation)}}}
+
+    3. Tree-reweighted BP for MAP problems (for HW map problem complete graph)
+
+       Refer to [[https://papers.nips.cc/paper/2206-exact-map-estimates-by-hypertree-agreement.pdf][exact MAP estimates by hypertree agreement]]
+
+       [[http://ssg.mit.edu/group/willsky/publ_pdfs/166_pub_AISTATS.pdf][tree-reweighted belief propagation algorithms and approximated ML esimation by pseudo-moment matching]]
+
+    4. Generalized BP for marginal distributions, [[https://www.cs.princeton.edu/courses/archive/spring06/cos598C/papers/YedidaFreemanWeiss2004.pdf][yedidis 2005, constructing free energy approximations and Generalized belief propagation algorithms]]
+
+       What about GBP for MAP problem?
+
+    5. Tree-structured EP, [[https://tminka.github.io/papers/eptree/minka-eptree.pdf][Tree-structured approximations by expectation propagation]]
+
+    6. Convergence Analysis, Roosta, 2008, [[https://ieeexplore.ieee.org/document/4599175][Convergence Analysis of Reweighted Sum-Product Algorithms]]
+
+
+** Neural network based methods
+
+*** Graphical Neural Networks
+    1. literature development path
+
+       > Half-automated message passing, [[https://papers.nips.cc/paper/5070-learning-to-pass-expectation-propagation-messages.pdf][Learning to Pass Expectation Propagation Messages]] , message-level automation
+
+       > Training neural network to do message passing, [[https://arxiv.org/abs/1803.07710][Inference in Probabilistic Graphical Models by Graph Neural Networks]] , train NN for message updates, and also NN for mapping messages to estimations. A good property observed in the work, trained NNs can be used for different factor graphs with different potentials and structures
+       Same track, [[https://arxiv.org/abs/1905.06214][GMNN: Graph Markov Neural Networks]], semi-supervised learning, EM is used for training.
+
+       > More generalized computation power: [[https://github.com/deepmind/graph_nets][Graph Net]], A graph network takes a graph as input and returns a graph as output. The input graph has edge- (E ), node- (V ), and global-level (u) attributes. The output graph has the same structure, but updated attributes. Graph networks are part of the broader family of "graph neural networks".
+
+       Idea to investigate: i. Using graph net or graphical neural network for belief updates, is it possible to train one graph net, such that it take factor graph in and output factor graph with belief converged already?
+
+       ii. using graph net, especially the GMNN, solves HW's symbol detection problem. Pilot symbols as labeled data, rest detection rely on the inference of semi-supervised learning.
+
+    2. alpha belief propagation with GAN ?
+
+       Reference:
+
+       > [[https://arxiv.org/abs/1612.05048][Adversarial Message Passing For Graphical Models]]
+
+       > [[https://arxiv.org/pdf/1905.12660.pdf][Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators]]
+
+    3. RENN for MAP problem?
+
+    More reference:
+   
+    > [[https://persagen.com/files/misc/scarselli2009graph.pdf][Scarselli, 2009, The graph neural network model]]
+
+*** Variational mehtods   
+    
+    > NIPS, Tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
+   
+** Learning of Graphical Models
+*** Parameter Learning
+
+   1. Learning graphical model parameters by approximate inference
+      
+      [[https://ieeexplore.ieee.org/abstract/document/6420841][Learning Graphical Model Parameters with Approximate Marginal Inference]]
+
+      [[https://arxiv.org/abs/1503.01228][Bethe Learning of Conditional Random Fields via MAP Decoding]]
+
+   2. Learning of MRF with neural networks
+      
+      > Wiseman and Kim, 2019, [[https://papers.nips.cc/paper/9687-amortized-bethe-free-energy-minimization-for-learning-mrfs.pdf][Amortized Bethe Free Energy Minimization for Learning MRFs]]
+      
+      > Kuleshov and Ermon, 2017, [[https://arxiv.org/abs/1711.02679][Neural Variational Inference and Learning in Undirected Graphical Models]]
+
+
+   3. Learning of Directed Graphs
+
+      > Chongxuan Li, 2020, [[https://arxiv.org/abs/1901.08400][To Relieve Your Headache of Training an MRF, Take AdVIL]]
+
+      > Mnih and Gregor, 2014, [[https://arxiv.org/abs/1402.0030][Neural Variational Inference and Learning in Belief Networks]]
+
+      > NIPS, Tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
+*** Structure/graph Learning
+    Todo: add refereces, RCN, AndOr graphs etc.
+      
+** Sparks
+
+*** Applying RENN for Conditional Random Field
+
+   1. RENN for conditional RBM
+   
+   2. RENN for high-order HMM
+
+      
+*** Hierarchical model: RCN + RENN
+
+*** HMM+GMs
+   
+   1. Apply to acoustic signal detection
+
+      1.1 {{{color(green,Derivatives Done)}}}
+
+      1.2 {{{color(orange,Experiments underoging)}}}
+
+      1.3 [[https://www.ijcai.org/Proceedings/11/Papers/203.pdf][A Hidden Markov Model Variant for Sequence Classification]], variant classification tricks from HMM
+
+   2. Apply to planning 
+
+*** HRCF for bio-medical application
+
+   1. Pure tractable density functions + BP or RENN
+
+   2. NN based emission probability + BP or RENN
+
+   
+*** flow+EM
+   1. {{{color(green, EM guides mixture building of probabilistic model, works.)}}}
+   2. How about using DCT/wavelet transform for our generative models?
+   2. Shall try EM with Ordinary Differential Equation?
+
+*** flow-model based classification
+   1. {{{color(green, Maximum likelihood estimation done, test done on cifar10)}}}
+   2. reform input x and class label as [x, c], the send [x, c] to go through invertible flow-model. To maximize the mutual information between x and c
+
+
+* Application of Graphical Models and Teaching
+
+** With HW
+ 
+   1. >  [[https://ieeexplore.ieee.org/document/5503193][Donoho, 2010, Message passingfor compressed sensing]] and [[https://arxiv.org/abs/0907.3574][Donoho, 2009, AMP for compressed sensing]]
+
+      > [[https://arxiv.org/abs/1610.03082][Rangan, 2018, VAMP]] 
+
+   2. OAMPNet, MMNet, [[https://arxiv.org/abs/1906.04610][Adaptive Neural Signal Detection for Massive MIMO]]
+
+      How about to bring the VAMP (or generalized AMP by Rangan, 2012, prefer VAMP) into OAMPNet? Better than OAMPNet?
+
+   3. SSFN seems to be able as candidate ITERATIVE detection method for MIMO as MMNet.
+
+   4. Use RENN with and without readout net for MIMO detection
+
+   5. If NN based method does not give very good performance on non-binary support cases, may just use the equivalence condition to convert the non-binary MRF binary MRF, solve the problem and cast the solution back.
+
 
 * GANs
-** minmax problem:
-1. robust linear clissifier + feature mapping: for robustness against noise and attack
-
-2. Minmax learning for remote prediction, find the connection to anto-encoder and GAN, do information bottleneck work, try to see (mutual information estimation in estimation information flow in DNN helps or not)
-3. Find OT distance in pix space and feature space, what is the condition for the eqvilence? then use ot upper bound to try the minmax problem... target: extend the problem into general case, not just linear dicision rule.
-** ROBUST probability learning
-
-1. try to use measure that is robust to noisy samples or outlier, such as beta-estimation, beta divergence, useVAE do the generator may solve the probability of g
+** Redefine the target of GAN
+   1. Try to define the targets of GAN as combinational conditionals distributions/combination of sample logics instead of joint decisions. Then the complex decision can be made by combination of simple logics. 
 
 ** Current design EOT-GAN help robust classification design/large-scale imaginary classification/ semi-supervised learning?
-
-
+   
+   
 ** Coverlutional lay bounded design, for lipschitz property
    +First step for the reference(random circulate coverlutional matrix), see if useful+
 
 ** Discrete GAN or RBM or Autoencoder
 
-** OT autoencoder
-OT is equivalent or leq than autoencoder structured autoencoder:
-1. consider the concatenation/progressive adding more mapping. See if each concatenation has complexity reduction, error bounding... $W(P_X,P_Y) \leq W(P_X, G1(Z1)) \leq W(X, G2(Z2)) \leq \cdots$
-2. $W(P_X,P_Y) \leq W(P_X, G2(Z2)) \leq W(G1(Z1), G2(Z2))$, i.e. do alternative mapping twice, what is the benefits of solving $W(G1(Z1), G2(Z2))$.
-3. Consider adaboosing for condition of going deeper
-4. cite:NIPS2017_7126 use beta-divergence for each mixture component generator optimization. This allow a training generator to omit tail samples during training. Empirical samples that are not captured during previous generator training will be put more weight and become high-weight samples for next generator training.
+** OT incremental building
    
+*** Additive Building:
+    [[file:images/GAN/incremental_building/P81115-111945.jpg][Discussion with Baptiste on additive para $\gamma$, remaining question: how to optimize Q]]
+    
+    +*** How about using barycenters model to do the incremental building?+
+*** seems one-to-mutiple barycenter computation is a base-line of mixture
+    
+*** Concatenating Building
+    
+    OT is equivalent or leq than autoencoder structured autoencoder:
+    1. consider the concatenation/progressive adding more mapping. See if each concatenation has complexity reduction, error bounding... $W(P_X,P_Y) \leq W(P_X, G1(Z1)) \leq W(X, G2(Z2)) \leq \cdots$
+    2. $W(P_X,P_Y) \leq W(P_X, G2(Z2)) \leq W(G1(Z1), G2(Z2))$, i.e. do alternative mapping twice, what is the benefits of solving $W(G1(Z1), G2(Z2))$.
+    3. Consider adaboosing for condition of going deeper
+    4. cite:NIPS2017_7126 use beta-divergence for each mixture component generator optimization. This allow a training generator to omit tail samples during training. Empirical samples that are not captured during previous generator training will be put more weight and become high-weight samples for next generator training.
+
+    5. Use Gaussian random encoder, benefit: the latent divergence with prior (gaussian prior) can be analytically studied.   
+
+
+** User GAN to learn context noise
+   User GAN to learn context noise distribution instead of signal itself. Then apply learned noise to signal. 
+
+** HMM+GMM+OT/GAN
+   HMM+GMM models perform good enough in clean/non-noise scenarios/context. But in heavy-noise scenario, it works poor.
+   $P_X$, the signal distribution itself or the feature distribution after MFCC, is not GMM but is modeled as GMM. So, how about learning the transformation $P_X \rightarrow Q_X$ to make $Q_X$ is Mixture Gaussian.
+
+   [[file:images/GAN/hmm/hmm_ot.jpg][Discussion with Saikat on application of OT to HMM]]
+
+** Using EOT for Coreset finding or generating
    
-** Wasserstein coreset/ barycenters and Boosting
+   1. Using EOT to compute coreset
+   2. Using EOT to train generative model to generate coreset. It is ok for mode collapse.
+   3. How about using beta-divergence for coreset problem?
 
-* Bayesian
+** convex duality (Farnia): 
+   
 
-** Bayesian ELBO
-   generative mode, adversarial optimization, optimize both the bonds and also the gap, is that possible???
+* Robustness
+** ROBUST probability learning
 
-** EP
+   1. try to use measure that is robust to noisy samples or outlier, such as beta-estimation, beta divergence, useVAE do the generator may solve the probability of g
 
-replace gaussian assumption with graphic model, optimize it as least as good as gaussian
+** minmax problem:
+   1. robust linear clissifier + feature mapping: for robustness against noise and attack
 
+   2. Minmax learning for remote prediction, find the connection to anto-encoder and GAN, do information bottleneck work, try to see (mutual information estimation in estimation information flow in DNN helps or not)
+   3. Find OT distance in pix space and feature space, what is the condition for the eqvilence? then use ot upper bound to try the minmax problem... target: extend the problem into general case, not just linear dicision rule.
 
-
-** EM
- Use EM philosophy to design the generalizing ability of inference. EM can handle the missing data case. Thus it is possible to embed this into inference algorithm design, by taking missing data as future data for prediction:
-**** 1. assuming the joint possible distribution, then embed it for training
-**** 1*. joint distribution in most cases is not available, try Monte Carlo?
-**** 2. In batch data feeding procedure, use generative models to generate relevant pseodo-input data, manipulate this percentage consist. (I think I can test it on CNN algorithms first)
-
-     
-
-** Occam rule
-Use Occam rule to balance the generalization and accuracy of algorithms and accuracy. A specific problem here could be to use this rule to get the best stacked ELM structures. May be it is interesting to link the regulation parameter lambda with Occam rule.
+** [[file:images/robustness/adversarial_sample.jpg][Discussion with Hossein]]
 
 
-** The Probabilistic Graphical Models
-   Chapter~15 introduce Bayesian Networks, undirected graphical models/Markov random field, factor graph, and message-passing algorithms including sum-product and max-product.cite:theodoridis2015machine.
-
-1. Check *normal factor graph*, a variant of the factor graphs has been recently introduced, where edges represent variables and vertices represent factors.
-2. Max-product and Max-sum, could be used to detect input signal structures, such as location of objects in pictures.
-3. Could the back-tracking be combined with two-direction message flowing, in order to get optima of input signal? How to find the optima in just two-direction message flowing? May should also pay attention to the hardware requirement(such as memory cost in message-passing inference).
-4. Back-tracking based method for cause input signal identification? Is it possible that after back-tracking, then try to reLearn the input nearby causal input signal? To improve the detection procession?
-5. redundant part signal of input detection? If the redundant part can be identified, the input can be simplified (accelerate the prediction speed?), or the pre-process transformation of input can be identified analytically and then be implied before each detection?
-
-6. Grouping the different parts of output signal, stop errors back-propagating to irrelevant input parts? This can also be benefited when the causal-output decision relationship is made.
-
-7. What is the discrimination dimension of overlaying typical activation functions into complex form, for given dimension of input?
-
-8. Is there metrics as replacement of loss function to better get the causal-output relationship?
-
-
+   
 * Interpretable Methods and Explanations
-   A general framework for learning different kinds of explanations for black box algorithms is proposed and experimentedcite:fong2017interpretable.
-   Google's interpretability tool: [[https://github.com/tensorflow/lucid][lucid@github]].
+  A general framework for learning different kinds of explanations for black box algorithms is proposed and experimentedcite:fong2017interpretable.
+  Google's interpretability tool: [[https://github.com/tensorflow/lucid][lucid@github]].
 
-1. Use lucid to study the inference propagation over CNN or its variants
-2. What is the relationship between salience map and neural network sparsity.
+  1. Use lucid to study the inference propagation over CNN or its variants
+  2. What is the relationship between salience map and neural network sparsity.
 
-    cite:fong2017interpretable proposes two test rules for leanring/inference algorithms: 1. classification itself 2. rotation perturbation on input. Regulation formulas are proposed. Deletion, noise and bluring on input images are experimented and discussed.
+     cite:fong2017interpretable proposes two test rules for leanring/inference algorithms: 1. classification itself 2. rotation perturbation on input. Regulation formulas are proposed. Deletion, noise and bluring on input images are experimented and discussed.
 
 
 
@@ -95,7 +308,7 @@ Use Occam rule to balance the generalization and accuracy of algorithms and accu
 
 
    
-     
+   
 * Reference
   bibliographystyle:unsrt
   bibliography:mLearningMemo.bib
