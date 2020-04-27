@@ -161,19 +161,35 @@
     
     Lin, 2015, [[http://papers.nips.cc/paper/5791-deeply-learning-the-messages-in-message-passing-inference.pdf][Deeply Learning the Messages in Message Passing Inference]]
 
-*** Variational mehtods   
+*** Variational methods   
     
     NIPS, Tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
     
-    Kingma and Welling, 2014, [[https://arxiv.org/abs/1312.6114][Auto-Encoding Variational Bayes]]
+    Kingma and Welling, 2014, Autoencoder: [[https://arxiv.org/abs/1312.6114][Auto-Encoding Variational Bayes]]
     
-    Kuleshov and Ermon, 2017, [[https://arxiv.org/abs/1711.02679][Neural Variational Inference and Learning in Undirected Graphical Models]]
+    Kuleshov and Ermon, 2017, NVIL: [[https://arxiv.org/abs/1711.02679][Neural Variational Inference and Learning in Undirected Graphical Models]]
 
-    Li, etc, 2020, [[https://arxiv.org/abs/1901.08400][To Relieve Your Headache of Training an MRF, Take AdVIL]]
+    Li, etc, 2020, AdVIL: [[https://arxiv.org/abs/1901.08400][To Relieve Your Headache of Training an MRF, Take AdVIL]]
 
     Lazaro-Gredilla, 2019 (Vicarious AI), [[https://arxiv.org/abs/1912.02893][Learning undirected models via query training]]
 
+    Sobolev and Vetrov, 2019, (Section 3 gives interesting discussion on literature works) [[http://papers.nips.cc/paper/8350-importance-weighted-hierarchical-variational-inference][Importance Weighted Hierarchical Variational Inference]]
 
+    Kingma, et al, 2016, [[https://papers.nips.cc/paper/6581-improved-variational-inference-with-inverse-autoregressive-flow][Improved Variational Inference with Inverse Autoregressive Flow]]
+    
+    Rezende, Mohamed, 2015, [[https://arxiv.org/abs/1505.05770][Variational Inference with Normalizing Flows]]
+
+*** Neural density function estimation
+    Chen et al, 2018, ODE: [[https://papers.nips.cc/paper/7892-neural-ordinary-differential-equations][Neural Ordinary Differential Equations]]
+
+    Kingma, Dhariwal, 2018, [[https://arxiv.org/abs/1807.03039][Glow: Generative Flow with Invertible 1x1 Convolutions]]
+    
+    Dinh, Sohl-Dickstein, Bengio, 2017, [[https://arxiv.org/pdf/1605.08803.pdf][Density Estimation using Real NVP]]
+
+    Dinh, Krueger, Bengio, 2014, [[https://arxiv.org/abs/1410.8516][NICE: Non-linear independent component estimation]]
+    
+    Inverse autoregreeeive flow as in previous subsection.
+    
 ** Learning of Graphical Models
 
 *** Parameter Learning
