@@ -4,7 +4,7 @@
 #+MACRO: color @@html:<font color="$1">$2</font>@@
 
 
-* Book and Thesis:
+* Book and Monograph:
 
    Book CACHE:
 
@@ -86,7 +86,7 @@
 
        2.1 investigate the effect to GBP or EP (or tree structured EP)
 
-       2.2 what its effect to RENN
+
 
 *** Application Consideration
 
@@ -98,7 +98,7 @@
 
        Ref3: [[https://arxiv.org/abs/1210.5644][Krahenbuhl, 2011, Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials]]
 
-    4. Can I interpret tree-reweighted RENN as a mixture method of MF, LoopyBP and GBP (or even including TWBP) after convexcify its corresponding hypergraph?
+
 
 
 *** Classical Inference Methods
@@ -146,8 +146,6 @@
        [[https://arxiv.org/abs/1612.05048][Adversarial Message Passing For Graphical Models]]
 
        [[https://arxiv.org/pdf/1905.12660.pdf][Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators]]
-
-    3. RENN for MAP problem?
 
     More reference:
    
@@ -215,48 +213,6 @@
 
        NIPS, Tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
 
-*** Structure/graph Learning
-    Todo: add refereces, RCN, AndOr graphs etc.
-      
-** Sparks
-
-*** Applying RENN for Conditional Random Field
-
-    1. RENN for conditional RBM
-
-    2. RENN for high-order HMM
-
-
-*** Hierarchical model: RCN + RENN
-
-*** HMM+GMs
-   
-    1. Apply to acoustic signal detection
-
-       1.1 {{{color(green,Derivatives Done)}}}
-
-       1.2 {{{color(orange,Experiments underoging)}}}
-
-       1.3 [[https://www.ijcai.org/Proceedings/11/Papers/203.pdf][A Hidden Markov Model Variant for Sequence Classification]], variant classification tricks from HMM
-
-    2. Apply to planning 
-
-*** HRCF for bio-medical application
-
-    1. Pure tractable density functions + BP or RENN
-
-    2. NN based emission probability + BP or RENN
-
-
-*** flow+EM
-    1. {{{color(green, EM guides mixture building of probabilistic model, works.)}}}
-    2. How about using DCT/wavelet transform for our generative models?
-    2. Shall try EM with Ordinary Differential Equation?
-
-*** flow-model based classification
-    1. {{{color(green, Maximum likelihood estimation done, test done on cifar10)}}}
-    2. reform input x and class label as [x, c], the send [x, c] to go through invertible flow-model. To maximize the mutual information between x and c
-
 * PGM and Decision-making in Dynamic Systems
 
   Sutton, Barto, 2018, [[https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions][Reinforcement learning (2ed edition)]]
@@ -268,99 +224,14 @@
   Haarnoja, et al 2017, [[https://arxiv.org/pdf/1702.08165.pdf][Reinforcement Learning with Deep Energy-Based Policies]]
 
     
-* Application of Graphical Models and Teaching
+* In connecting with others
 
-** With HW
- 
-   1. >  [[https://ieeexplore.ieee.org/document/5503193][Donoho, 2010, Message passingfor compressed sensing]] and [[https://arxiv.org/abs/0907.3574][Donoho, 2009, AMP for compressed sensing]]
-
-      > [[https://arxiv.org/abs/1610.03082][Rangan, 2018, VAMP]] 
-
-   2. OAMPNet, MMNet, [[https://arxiv.org/abs/1906.04610][Adaptive Neural Signal Detection for Massive MIMO]]
-
-      How about to bring the VAMP (or generalized AMP by Rangan, 2012, prefer VAMP) into OAMPNet? Better than OAMPNet?
-
-   3. SSFN seems to be able as candidate ITERATIVE detection method for MIMO as MMNet.
-
-   4. Use RENN with and without readout net for MIMO detection
-
-   5. If NN based method does not give very good performance on non-binary support cases, may just use the equivalence condition to convert the non-binary MRF binary MRF, solve the problem and cast the solution back.
-
-   6. Bring MDP into non-stationary cases
-
-
-* GANs
-** Redefine the target of GAN
-   1. Try to define the targets of GAN as combinational conditionals distributions/combination of sample logics instead of joint decisions. Then the complex decision can be made by combination of simple logics. 
-
-** Current design EOT-GAN help robust classification design/large-scale imaginary classification/ semi-supervised learning?
-   
-   
-** Coverlutional lay bounded design, for lipschitz property
-   +First step for the reference(random circulate coverlutional matrix), see if useful+
+** GANs
 
 ** Discrete GAN or RBM or Autoencoder
 
-** OT incremental building
-   
-*** Additive Building:
-    [[file:images/GAN/incremental_building/P81115-111945.jpg][Discussion with Baptiste on additive para $\gamma$, remaining question: how to optimize Q]]
-    
-    +*** How about using barycenters model to do the incremental building?+
-*** seems one-to-mutiple barycenter computation is a base-line of mixture
-    
-*** Concatenating Building
-    
-    OT is equivalent or leq than autoencoder structured autoencoder:
-    1. consider the concatenation/progressive adding more mapping. See if each concatenation has complexity reduction, error bounding... $W(P_X,P_Y) \leq W(P_X, G1(Z1)) \leq W(X, G2(Z2)) \leq \cdots$
-    2. $W(P_X,P_Y) \leq W(P_X, G2(Z2)) \leq W(G1(Z1), G2(Z2))$, i.e. do alternative mapping twice, what is the benefits of solving $W(G1(Z1), G2(Z2))$.
-    3. Consider adaboosing for condition of going deeper
-    4. cite:NIPS2017_7126 use beta-divergence for each mixture component generator optimization. This allow a training generator to omit tail samples during training. Empirical samples that are not captured during previous generator training will be put more weight and become high-weight samples for next generator training.
-
-    5. Use Gaussian random encoder, benefit: the latent divergence with prior (gaussian prior) can be analytically studied.   
-
-
-** User GAN to learn context noise
-   User GAN to learn context noise distribution instead of signal itself. Then apply learned noise to signal. 
-
-** HMM+GMM+OT/GAN
-   HMM+GMM models perform good enough in clean/non-noise scenarios/context. But in heavy-noise scenario, it works poor.
-   $P_X$, the signal distribution itself or the feature distribution after MFCC, is not GMM but is modeled as GMM. So, how about learning the transformation $P_X \rightarrow Q_X$ to make $Q_X$ is Mixture Gaussian.
-
-   [[file:images/GAN/hmm/hmm_ot.jpg][Discussion with Saikat on application of OT to HMM]]
-
-** Using EOT for Coreset finding or generating
-   
-   1. Using EOT to compute coreset
-   2. Using EOT to train generative model to generate coreset. It is ok for mode collapse.
-   3. How about using beta-divergence for coreset problem?
-
-** convex duality (Farnia): 
-   
-
-* Robustness
-** ROBUST probability learning
-
-   1. try to use measure that is robust to noisy samples or outlier, such as beta-estimation, beta divergence, useVAE do the generator may solve the probability of g
-
-** minmax problem:
-   1. robust linear clissifier + feature mapping: for robustness against noise and attack
-
-   2. Minmax learning for remote prediction, find the connection to anto-encoder and GAN, do information bottleneck work, try to see (mutual information estimation in estimation information flow in DNN helps or not)
-   3. Find OT distance in pix space and feature space, what is the condition for the eqvilence? then use ot upper bound to try the minmax problem... target: extend the problem into general case, not just linear dicision rule.
-
-** [[file:images/robustness/adversarial_sample.jpg][Discussion with Hossein]]
-
 
    
-* Interpretable Methods and Explanations
-  A general framework for learning different kinds of explanations for black box algorithms is proposed and experimentedcite:fong2017interpretable.
-  Google's interpretability tool: [[https://github.com/tensorflow/lucid][lucid@github]].
-
-  1. Use lucid to study the inference propagation over CNN or its variants
-  2. What is the relationship between salience map and neural network sparsity.
-
-     cite:fong2017interpretable proposes two test rules for leanring/inference algorithms: 1. classification itself 2. rotation perturbation on input. Regulation formulas are proposed. Deletion, noise and bluring on input images are experimented and discussed.
 
 
 
@@ -368,18 +239,4 @@
 
 
 
-** Bayesian Learning
 
-   
-* Record of reading
-
-** Causal Inference
-   cite:pearl2018theoretical explains the theoretical limits of current
-   state-of-art machine learning that are mostly based on statistical methods.
-
-
-   
-   
-* Reference
-  bibliographystyle:unsrt
-  bibliography:mLearningMemo.bib
