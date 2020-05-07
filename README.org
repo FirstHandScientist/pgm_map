@@ -12,26 +12,22 @@
    
    Bogdan Savchynskyy, 2019, [[file:~/Documents/my_eBooks/mLearning/discrete_graphical_models_an_optimization_perspective.pdf][Discrete Graphical Models -- An Optimization Perspective]] < 
 
-   Kingma and Welling, 2019, [[file:~/Documents/my_eBooks/mLearning/introduction_to_variatinal_autoencoders.pdf][An Introduction to Variational Autoencoders]] <
-
    Angelino, 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]
    
    Nowozin, 2011, [[http://www.nowozin.net/sebastian/papers/nowozin2011structured-tutorial.pdf][Structured Learning and Prediction in Computer Vision]] <
    
    
-   Books:
+   Books or Monograph:
    
+   Kingma and Welling, 2019, [[file:~/Documents/my_eBooks/mLearning/introduction_to_variatinal_autoencoders.pdf][An Introduction to Variational Autoencoders]] 
+
    Sutton, 2010, [[https://homepages.inf.ed.ac.uk/csutton/publications/crftut-fnt.pdf][An Introduction to Conditional Random Fields]]
    
    Wainwright, 2008, [[file:~/Documents/my_eBooks/mLearning/graphical_models_wainwright.pdf][Graphical Models, Exponential Families, and Variational Inference]]
     
    Koller, 2009, [[file:~/Documents/my_eBooks/mLearning/probabilistic_graphical_models_principles_techniques.pdf][Probabilistic graphical models: principles and techniques]]
 
-   *Thesis CACHE*:
-   
    Mark Rowland, 2018, [[https://www.repository.cam.ac.uk/handle/1810/287479][Structure in Machine Learning: Graphical Models and Monte Carlo Methods]]
-
-   *Thesis*:
 
    Yingzhen Li, 2018, [[https://www.repository.cam.ac.uk/handle/1810/277549][Approximate Inference: New Visions]]
    
@@ -261,7 +257,17 @@
     1. {{{color(green, Maximum likelihood estimation done, test done on cifar10)}}}
     2. reform input x and class label as [x, c], the send [x, c] to go through invertible flow-model. To maximize the mutual information between x and c
 
+* PGM and Decision-making in Dynamic Systems
 
+  Sutton, Barto, 2018, [[https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions][Reinforcement learning (2ed edition)]]
+  
+  Ziebart, 2010, [[https://www.cs.cmu.edu/~bziebart/publications/thesis-bziebart.pdf][Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy]]
+
+  Levin, 2018, [[https://arxiv.org/abs/1805.00909][Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review]]
+
+  Haarnoja, et al 2017, [[https://arxiv.org/pdf/1702.08165.pdf][Reinforcement Learning with Deep Energy-Based Policies]]
+
+    
 * Application of Graphical Models and Teaching
 
 ** With HW
@@ -279,6 +285,8 @@
    4. Use RENN with and without readout net for MIMO detection
 
    5. If NN based method does not give very good performance on non-binary support cases, may just use the equivalence condition to convert the non-binary MRF binary MRF, solve the problem and cast the solution back.
+
+   6. Bring MDP into non-stationary cases
 
 
 * GANs
