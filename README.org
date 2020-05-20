@@ -215,30 +215,31 @@
 
 * PGM and Decision-making in Dynamic Systems
 
-  Sutton, Barto, 2018, [[https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions][Reinforcement learning (2ed edition)]]
++ Sutton, Barto, 2018, [[https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions][Reinforcement learning (2ed edition)]]
 
-  Bubeck, Cesa-Bianchi, 2012, [[https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/SurveyBCB12.pdf][Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems]], Now publisher, Foundations and trends in machine learning
++ Bubeck, Cesa-Bianchi, 2012, [[https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/SurveyBCB12.pdf][Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems]], Now publisher, Foundations and trends in machine learning
 
-  Ziebart, 2010, [[https://www.cs.cmu.edu/~bziebart/publications/thesis-bziebart.pdf][Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy]]
++ Ziebart, 2010, [[https://www.cs.cmu.edu/~bziebart/publications/thesis-bziebart.pdf][Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy]]
 
-  Levin, 2018, [[https://arxiv.org/abs/1805.00909][Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review]]
++ Levin, 2018, [[https://arxiv.org/abs/1805.00909][Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review]]
 
-  Haarnoja, et al 2017, [[https://arxiv.org/pdf/1702.08165.pdf][Reinforcement Learning with Deep Energy-Based Policies]]
++ Haarnoja, et al 2017, [[https://arxiv.org/pdf/1702.08165.pdf][Reinforcement Learning with Deep Energy-Based Policies]]
   
-  Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming
++ Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming
   
-  Szepesvari, 2009, [[https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs-lecture.pdf][Algorithms for Reinforcement Learning]]
++ Szepesvari, 2009, [[https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs-lecture.pdf][Algorithms for Reinforcement Learning]]
 
 ** Courses
 
-...[[https://www.davidsilver.uk/teaching/][Reinforcement Learning (UCL)]]
-
-...[[http://rail.eecs.berkeley.edu/deeprlcourse/][Deep Reinforcement Learning (CS285)]]
-
-...[[https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs][Advanced Deep Learning & Reinforcement Learning]]
+- [[https://www.davidsilver.uk/teaching/][Reinforcement Learning (UCL)]]
+- [[http://rail.eecs.berkeley.edu/deeprlcourse/][Deep Reinforcement Learning (CS285)]]
+- [[https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs][Advanced Deep Learning & Reinforcement Learning]]
 
     
 * In connecting with others
++ [[https://github.com/otokonoko8/implicit-variational-inference][Repos: Advanced-variational-inference-paper]]
+
++ [[https://github.com/otokonoko8/deep-Bayesian-nonparametrics-papers][Repos: Deep-Bayesian-nonparametrics-papers]] 
 
 ** GANs
 
