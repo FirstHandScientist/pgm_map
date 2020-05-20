@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-05-20 Wed 12:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mind palace: Probabilistic Graphical Models</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Dong" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Mind palace: Probabilistic Graphical Models</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge1f7d78">1. Book and Monograph:</a></li>
+<li><a href="#org8aad52a">2. Inference and Learning of PGMs</a>
+<ul>
+<li><a href="#org9bf07a4">2.1. Inference methods and techniques</a>
+<ul>
+<li><a href="#orge27741c">2.1.1. Application Consideration</a></li>
+<li><a href="#org7c63617">2.1.2. Classical Inference Methods</a></li>
+</ul>
+</li>
+<li><a href="#org3e42279">2.2. Neural network based methods</a>
+<ul>
+<li><a href="#org31a3e4a">2.2.1. Graphical Neural Networks</a></li>
+<li><a href="#orgea90ea3">2.2.2. Learning messages</a></li>
+<li><a href="#orga1e7443">2.2.3. Variational methods</a></li>
+<li><a href="#orge8f8e69">2.2.4. Neural density function estimation</a></li>
+</ul>
+</li>
+<li><a href="#orgbcbb834">2.3. Learning of Graphical Models</a>
+<ul>
+<li><a href="#org41b34d0">2.3.1. Parameter Learning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4a169d3">3. PGM and Decision-making in Dynamic Systems</a>
+<ul>
+<li><a href="#org37c5b6e">3.1. Courses</a></li>
+</ul>
+</li>
+<li><a href="#org40a940a">4. In connecting with others</a>
+<ul>
+<li><a href="#org4b02641">4.1. GANs</a></li>
+<li><a href="#org4951404">4.2. Discrete GAN or RBM or Autoencoder</a></li>
+<li><a href="#orgb890afc">4.3. Optimal Transport (likelihood-free learning)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orge1f7d78" class="outline-2">
+<h2 id="orge1f7d78"><span class="section-number-2">1</span> Book and Monograph:</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Book CACHE:
+</p>
+
+<p>
+Komodakis etc, 2016, <a href="https://www.nowpublishers.com/article/Details/CGV-066">(Hyper)-Graphs Inference through Convex Relaxations and Move Making Algorithms: Contributions and Applications in Artificial Vision</a>
+</p>
+
+<p>
+Bogdan Savchynskyy, 2019, <a href="file:///home/dong/Documents/my_eBooks/mLearning/discrete_graphical_models_an_optimization_perspective.pdf">Discrete Graphical Models &#x2013; An Optimization Perspective</a> &lt; 
+</p>
+
+<p>
+Angelino, 2016, <a href="https://www.nowpublishers.com/article/Details/MAL-052">Patterns of Scalable Bayesian Inference</a>
+</p>
+
+<p>
+Nowozin, 2011, <a href="http://www.nowozin.net/sebastian/papers/nowozin2011structured-tutorial.pdf">Structured Learning and Prediction in Computer Vision</a> &lt;
+</p>
+
+
+<p>
+Books or Monograph:
+</p>
+
+<p>
+Kingma and Welling, 2019, <a href="file:///home/dong/Documents/my_eBooks/mLearning/introduction_to_variatinal_autoencoders.pdf">An Introduction to Variational Autoencoders</a> 
+</p>
+
+<p>
+Sutton, 2010, <a href="https://homepages.inf.ed.ac.uk/csutton/publications/crftut-fnt.pdf">An Introduction to Conditional Random Fields</a>
+</p>
+
+<p>
+Wainwright, 2008, <a href="file:///home/dong/Documents/my_eBooks/mLearning/graphical_models_wainwright.pdf">Graphical Models, Exponential Families, and Variational Inference</a>
+</p>
+
+<p>
+Koller, 2009, <a href="file:///home/dong/Documents/my_eBooks/mLearning/probabilistic_graphical_models_principles_techniques.pdf">Probabilistic graphical models: principles and techniques</a>
+</p>
+
+<p>
+Mark Rowland, 2018, <a href="https://www.repository.cam.ac.uk/handle/1810/287479">Structure in Machine Learning: Graphical Models and Monte Carlo Methods</a>
+</p>
+
+<p>
+Yingzhen Li, 2018, <a href="https://www.repository.cam.ac.uk/handle/1810/277549">Approximate Inference: New Visions</a>
+</p>
+
+<p>
+Adrian Weller, 2014, <a href="http://mlg.eng.cam.ac.uk/adrian/phd_FINAL.pdf">Methods for Inference in Graphical Models</a>
+</p>
+
+<p>
+Ihler, Alexander:
+</p>
+
+<p>
+Lou, Qi, 2018, <a href="https://escholarship.org/uc/item/7sc0m97f">Anytime Approximate Inference in Graphical Models</a>
+</p>
+
+<p>
+Ping, Wei, 2016, <a href="https://escholarship.org/uc/item/7q90z4b5">Learning and Inference in Latent Variable Graphical Models</a>
+</p>
+
+<p>
+Forouzan, Sholeh, 2015, <a href="https://escholarship.org/uc/item/5n4733cz">Approximate Inference in Graphical Models</a>
+</p>
+
+<p>
+Qiang, Liu, 2014, <a href="https://escholarship.org/uc/item/92p8w3xb">Reasoning and Decisions in Probabilistic Graphical Models - A Unified Framework</a>
+</p>
+
+<p>
+Minka:
+</p>
+
+<p>
+Yuan Qi, 2005, <a href="https://affect.media.mit.edu/pdfs/05.qi-phd.pdf">Extending Expectation Propagation for Graphical Models</a>
+</p>
+
+<p>
+Thomas P Minka, 2001, <a href="https://tminka.github.io/papers/ep/minka-thesis.pdf">A family of algorithms for approximate Bayesian inference</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org8aad52a" class="outline-2">
+<h2 id="org8aad52a"><span class="section-number-2">2</span> Inference and Learning of PGMs</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org9bf07a4" class="outline-3">
+<h3 id="org9bf07a4"><span class="section-number-3">2.1</span> Inference methods and techniques</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orge27741c" class="outline-4">
+<h4 id="orge27741c"><span class="section-number-4">2.1.1</span> Application Consideration</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ol class="org-ol">
+<li><p>
+What will I get by applying the RNN's mean field explanation to RNN augmented Kalman filter?
+</p>
+
+<p>
+Ref1: <a href="https://papers.nips.cc/paper/9532-combining-generative-and-discriminative-models-for-hybrid-inference.pdf">Satorras, 2019, Combining Generative and Discriminative Models for Hybrid Inference</a>
+</p>
+
+<p>
+Ref2: <a href="https://arxiv.org/pdf/1502.03240.pdf">Zheng, 2019, Conditional Random Fields as Recurrent Neural Networks</a>
+</p>
+
+<p>
+Ref3: <a href="https://arxiv.org/abs/1210.5644">Krahenbuhl, 2011, Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials</a>
+</p></li>
+</ol>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org7c63617" class="outline-4">
+<h4 id="org7c63617"><span class="section-number-4">2.1.2</span> Classical Inference Methods</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ol class="org-ol">
+<li>Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP</li>
+
+<li><p>
+<font color="green">Alpha belief propagation</font>
+</p>
+
+<p>
+<font color="green"> convergence property of Alpha belief propagation</font>
+</p></li>
+
+<li><p>
+Tree-reweighted BP for MAP problems (for HW map problem complete graph)
+</p>
+
+<p>
+Refer to <a href="https://papers.nips.cc/paper/2206-exact-map-estimates-by-hypertree-agreement.pdf">exact MAP estimates by hypertree agreement</a>
+</p>
+
+<p>
+<a href="http://ssg.mit.edu/group/willsky/publ_pdfs/166_pub_AISTATS.pdf">tree-reweighted belief propagation algorithms and approximated ML esimation by pseudo-moment matching</a>
+</p></li>
+
+<li><p>
+Generalized BP for marginal distributions, <a href="https://www.cs.princeton.edu/courses/archive/spring06/cos598C/papers/YedidaFreemanWeiss2004.pdf">yedidis 2005, constructing free energy approximations and Generalized belief propagation algorithms</a>
+</p>
+
+<p>
+What about GBP for MAP problem?
+</p></li>
+
+<li>Tree-structured EP, <a href="https://tminka.github.io/papers/eptree/minka-eptree.pdf">Tree-structured approximations by expectation propagation</a></li>
+
+<li>Convergence Analysis, Roosta, 2008, <a href="https://ieeexplore.ieee.org/document/4599175">Convergence Analysis of Reweighted Sum-Product Algorithms</a></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org3e42279" class="outline-3">
+<h3 id="org3e42279"><span class="section-number-3">2.2</span> Neural network based methods</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org31a3e4a" class="outline-4">
+<h4 id="org31a3e4a"><span class="section-number-4">2.2.1</span> Graphical Neural Networks</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ol class="org-ol">
+<li><p>
+literature development path
+</p>
+
+<p>
+Half-automated message passing, <a href="https://papers.nips.cc/paper/5070-learning-to-pass-expectation-propagation-messages.pdf">Learning to Pass Expectation Propagation Messages</a> , message-level automation
+</p>
+
+<p>
+Training neural network to do message passing, <a href="https://arxiv.org/abs/1803.07710">Inference in Probabilistic Graphical Models by Graph Neural Networks</a> , train NN for message updates, and also NN for mapping messages to estimations. A good property observed in the work, trained NNs can be used for different factor graphs with different potentials and structures
+Same track, <a href="https://arxiv.org/abs/1905.06214">GMNN: Graph Markov Neural Networks</a>, semi-supervised learning, EM is used for training.
+</p>
+
+<p>
+More generalized computation power: <a href="https://github.com/deepmind/graph_nets">Graph Net</a>, A graph network takes a graph as input and returns a graph as output. The input graph has edge- (E ), node- (V ), and global-level (u) attributes. The output graph has the same structure, but updated attributes. Graph networks are part of the broader family of "graph neural networks".
+</p>
+
+<p>
+Idea to investigate: i. Using graph net or graphical neural network for belief updates, is it possible to train one graph net, such that it take factor graph in and output factor graph with belief converged already?
+</p>
+
+<p>
+ii. using graph net, especially the GMNN, solves HW's symbol detection problem. Pilot symbols as labeled data, rest detection rely on the inference of semi-supervised learning.
+</p></li>
+
+<li><p>
+alpha belief propagation with GAN ?
+</p>
+
+<p>
+Reference:
+</p>
+
+<p>
+<a href="https://arxiv.org/abs/1612.05048">Adversarial Message Passing For Graphical Models</a>
+</p>
+
+<p>
+<a href="https://arxiv.org/pdf/1905.12660.pdf">Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators</a>
+</p></li>
+</ol>
+
+<p>
+More reference:
+</p>
+
+<p>
+<a href="https://persagen.com/files/misc/scarselli2009graph.pdf">Scarselli, 2009, The graph neural network model</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea90ea3" class="outline-4">
+<h4 id="orgea90ea3"><span class="section-number-4">2.2.2</span> Learning messages</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+Lin, 2015, <a href="http://papers.nips.cc/paper/5791-deeply-learning-the-messages-in-message-passing-inference.pdf">Deeply Learning the Messages in Message Passing Inference</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1e7443" class="outline-4">
+<h4 id="orga1e7443"><span class="section-number-4">2.2.3</span> Variational methods</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+NIPS, Tutorial 2016, <a href="https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf">Variational Inference</a>
+</p>
+
+<p>
+Kingma and Welling, 2014, Autoencoder: <a href="https://arxiv.org/abs/1312.6114">Auto-Encoding Variational Bayes</a>
+</p>
+
+<p>
+Kuleshov and Ermon, 2017, NVIL: <a href="https://arxiv.org/abs/1711.02679">Neural Variational Inference and Learning in Undirected Graphical Models</a>
+</p>
+
+<p>
+Li, etc, 2020, AdVIL: <a href="https://arxiv.org/abs/1901.08400">To Relieve Your Headache of Training an MRF, Take AdVIL</a>
+</p>
+
+<p>
+Lazaro-Gredilla, 2019 (Vicarious AI), <a href="https://arxiv.org/abs/1912.02893">Learning undirected models via query training</a>
+</p>
+
+<p>
+Sobolev and Vetrov, 2019, (Section 3 gives interesting discussion on literature works) <a href="http://papers.nips.cc/paper/8350-importance-weighted-hierarchical-variational-inference">Importance Weighted Hierarchical Variational Inference</a>
+</p>
+
+<p>
+Kingma, et al, 2016, <a href="https://papers.nips.cc/paper/6581-improved-variational-inference-with-inverse-autoregressive-flow">Improved Variational Inference with Inverse Autoregressive Flow</a>
+</p>
+
+<p>
+Rezende, Mohamed, 2015, <a href="https://arxiv.org/abs/1505.05770">Variational Inference with Normalizing Flows</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8f8e69" class="outline-4">
+<h4 id="orge8f8e69"><span class="section-number-4">2.2.4</span> Neural density function estimation</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+Chen et al, 2018, ODE: <a href="https://papers.nips.cc/paper/7892-neural-ordinary-differential-equations">Neural Ordinary Differential Equations</a>
+</p>
+
+<p>
+Kingma, Dhariwal, 2018, <a href="https://arxiv.org/abs/1807.03039">Glow: Generative Flow with Invertible 1x1 Convolutions</a>
+</p>
+
+<p>
+Dinh, Sohl-Dickstein, Bengio, 2017, <a href="https://arxiv.org/pdf/1605.08803.pdf">Density Estimation using Real NVP</a>
+</p>
+
+<p>
+Dinh, Krueger, Bengio, 2014, <a href="https://arxiv.org/abs/1410.8516">NICE: Non-linear independent component estimation</a>
+</p>
+
+<p>
+Inverse autoregreeeive flow as in previous subsection.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbcbb834" class="outline-3">
+<h3 id="orgbcbb834"><span class="section-number-3">2.3</span> Learning of Graphical Models</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org41b34d0" class="outline-4">
+<h4 id="org41b34d0"><span class="section-number-4">2.3.1</span> Parameter Learning</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ol class="org-ol">
+<li><p>
+Learning graphical model parameters by approximate inference
+</p>
+
+<p>
+Domke, 2013, <a href="https://ieeexplore.ieee.org/abstract/document/6420841">Learning Graphical Model Parameters with Approximate Marginal Inference</a>
+</p>
+
+<p>
+Tang, 2015, <a href="https://arxiv.org/abs/1503.01228">Bethe Learning of Conditional Random Fields via MAP Decoding</a>
+</p>
+
+<p>
+You Lu, 2019, <a href="https://www.aaai.org/ojs/index.php/AAAI/article/view/4357">Block Belief Propagation for Parameter Learning in Markov Random Fields</a>
+</p>
+
+<p>
+Hazan, 2016, <a href="http://www.jmlr.org/papers/v17/13-260.html">Blending Learning and Inference in Conditional Random Fields</a>
+</p></li>
+
+<li><p>
+Learning of MRF with neural networks
+</p>
+
+<p>
+Wiseman and Kim, 2019, <a href="https://papers.nips.cc/paper/9687-amortized-bethe-free-energy-minimization-for-learning-mrfs.pdf">Amortized Bethe Free Energy Minimization for Learning MRFs</a>
+</p>
+
+<p>
+Kuleshov and Ermon, 2017, <a href="https://arxiv.org/abs/1711.02679">Neural Variational Inference and Learning in Undirected Graphical Models</a>
+</p></li>
+</ol>
+
+
+<ol class="org-ol">
+<li><p>
+Learning of Directed Graphs
+</p>
+
+<p>
+Chongxuan Li, 2020, <a href="https://arxiv.org/abs/1901.08400">To Relieve Your Headache of Training an MRF, Take AdVIL</a>
+</p>
+
+<p>
+Mnih and Gregor, 2014, <a href="https://arxiv.org/abs/1402.0030">Neural Variational Inference and Learning in Belief Networks</a>
+</p>
+
+<p>
+NIPS, Tutorial 2016, <a href="https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf">Variational Inference</a>
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4a169d3" class="outline-2">
+<h2 id="org4a169d3"><span class="section-number-2">3</span> PGM and Decision-making in Dynamic Systems</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Sutton, Barto, 2018, <a href="https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions">Reinforcement learning (2ed edition)</a></li>
+
+<li>Bubeck, Cesa-Bianchi, 2012, <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/SurveyBCB12.pdf">Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems</a>, Now publisher, Foundations and trends in machine learning</li>
+
+<li>Ziebart, 2010, <a href="https://www.cs.cmu.edu/~bziebart/publications/thesis-bziebart.pdf">Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy</a></li>
+
+<li>Levin, 2018, <a href="https://arxiv.org/abs/1805.00909">Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review</a></li>
+
+<li>Haarnoja, et al 2017, <a href="https://arxiv.org/pdf/1702.08165.pdf">Reinforcement Learning with Deep Energy-Based Policies</a></li>
+
+<li>Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming</li>
+
+<li>Szepesvari, 2009, <a href="https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs-lecture.pdf">Algorithms for Reinforcement Learning</a></li>
+</ul>
+</div>
+
+<div id="outline-container-org37c5b6e" class="outline-3">
+<h3 id="org37c5b6e"><span class="section-number-3">3.1</span> Courses</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><a href="https://www.davidsilver.uk/teaching/">Reinforcement Learning (UCL)</a></li>
+<li><a href="http://rail.eecs.berkeley.edu/deeprlcourse/">Deep Reinforcement Learning (CS285)</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs">Advanced Deep Learning &amp; Reinforcement Learning</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org40a940a" class="outline-2">
+<h2 id="org40a940a"><span class="section-number-2">4</span> In connecting with others</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><a href="https://github.com/otokonoko8/implicit-variational-inference">Repos: Advanced-variational-inference-paper</a></li>
+
+<li><a href="https://github.com/otokonoko8/deep-Bayesian-nonparametrics-papers">Repos: Deep-Bayesian-nonparametrics-papers</a></li>
+</ul>
+</div>
+
+<div id="outline-container-org4b02641" class="outline-3">
+<h3 id="org4b02641"><span class="section-number-3">4.1</span> GANs</h3>
+</div>
+
+<div id="outline-container-org4951404" class="outline-3">
+<h3 id="org4951404"><span class="section-number-3">4.2</span> Discrete GAN or RBM or Autoencoder</h3>
+</div>
+
+<div id="outline-container-orgb890afc" class="outline-3">
+<h3 id="orgb890afc"><span class="section-number-3">4.3</span> Optimal Transport (likelihood-free learning)</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+&#x2026; Matthed Thorpe, 2018, <a href="http://www.math.cmu.edu/~mthorpe/OTNotes">Introduction to Optimal Transport</a>
+&#x2026; Peyre, Cuturi, 2018, Computational Optimal Transport, <a href="https://optimaltransport.github.io/resources/">Codes and slides for OT</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Dong</p>
+<p class="date">Created: 2020-05-20 Wed 12:51</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
