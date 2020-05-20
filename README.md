@@ -1,55 +1,30 @@
 
 # Table of Contents
 
-1.  [Book and Thesis:](#org900b041)
-2.  [Inference and Learning of PGMs](#orgb9e78b8)
-    1.  [Inference methods and techniques](#org109157d)
-        1.  [Application Consideration](#org8a2a84f)
-        2.  [Classical Inference Methods](#org2801ae0)
-    2.  [Neural network based methods](#org25834a2)
-        1.  [Graphical Neural Networks](#orga24d9fe)
-        2.  [Learning messages](#org4e653cd)
-        3.  [Variational mehtods](#org30aebfd)
-    3.  [Learning of Graphical Models](#orgdd1af7a)
-        1.  [Parameter Learning](#org7195232)
-        2.  [Structure/graph Learning](#org74025f9)
-    4.  [Sparks](#orgf5c95a5)
-        1.  [Applying RENN for Conditional Random Field](#org049e070)
-        2.  [Hierarchical model: RCN + RENN](#org7f6946a)
-        3.  [HMM+GMs](#orgda3bb38)
-        4.  [HRCF for bio-medical application](#orga91b1e3)
-        5.  [flow+EM](#org7b45191)
-        6.  [flow-model based classification](#org2f69a3c)
-3.  [Application of Graphical Models and Teaching](#org5f6da32)
-    1.  [With HW](#org1493765)
-4.  [GANs](#org8b2e138)
-    1.  [Redefine the target of GAN](#org4fc808a)
-    2.  [Current design EOT-GAN help robust classification design/large-scale imaginary classification/ semi-supervised learning?](#org29b5542)
-    3.  [Coverlutional lay bounded design, for lipschitz property](#orga5b23b7)
-    4.  [Discrete GAN or RBM or Autoencoder](#org81a179b)
-    5.  [OT incremental building](#org22e95e7)
-        1.  [Additive Building:](#org344b4be)
-        2.  [seems one-to-mutiple barycenter computation is a base-line of mixture](#orgfaf508b)
-        3.  [Concatenating Building](#orgd30e3b1)
-    6.  [User GAN to learn context noise](#org9c6638a)
-    7.  [HMM+GMM+OT/GAN](#orgc2cf903)
-    8.  [Using EOT for Coreset finding or generating](#org8018bea)
-    9.  [convex duality (Farnia):](#org5c4b6a2)
-5.  [Robustness](#org236111f)
-    1.  [ROBUST probability learning](#org980dc47)
-    2.  [minmax problem:](#org6fc1acc)
-    3.  [Discussion with Hossein](#orga6f4363)
-6.  [Interpretable Methods and Explanations](#org2e88eb4)
-    1.  [Bayesian Learning](#org95f1ae3)
-7.  [Record of reading](#org470c5d7)
-    1.  [Causal Inference](#orgdb9f549)
-8.  [Reference](#org12a41d0)
+1.  [Book and Monograph:](#orgaa726f5)
+2.  [Inference and Learning of PGMs](#orgda36ec6)
+    1.  [Inference methods and techniques](#org84564a6)
+        1.  [Application Consideration](#orga2413ea)
+        2.  [Classical Inference Methods](#org43c9e4b)
+    2.  [Neural network based methods](#orgd19ee4d)
+        1.  [Graphical Neural Networks](#org8661587)
+        2.  [Learning messages](#orgd867ca6)
+        3.  [Variational methods](#org7ce1012)
+        4.  [Neural density function estimation](#org657febd)
+    3.  [Learning of Graphical Models](#org3a8c1dc)
+        1.  [Parameter Learning](#org95447f8)
+3.  [PGM and Decision-making in Dynamic Systems](#org1480a13)
+    1.  [Courses](#orgc376de3)
+4.  [In connecting with others](#orgf1a0560)
+    1.  [GANs](#orgd99e34b)
+    2.  [Discrete GAN or RBM or Autoencoder](#orgc543275)
+    3.  [Optimal Transport (likelihood-free learning)](#org817015e)
 
 
 
-<a id="org900b041"></a>
+<a id="orgaa726f5"></a>
 
-# Book and Thesis:
+# Book and Monograph:
 
 Book CACHE:
 
@@ -57,13 +32,13 @@ Komodakis etc, 2016, [(Hyper)-Graphs Inference through Convex Relaxations and Mo
 
 Bogdan Savchynskyy, 2019, [Discrete Graphical Models &#x2013; An Optimization Perspective](file:///home/dong/Documents/my_eBooks/mLearning/discrete_graphical_models_an_optimization_perspective.pdf) < 
 
-Kingma and Welling, 2019, [An Introduction to Variational Autoencoders](file:///home/dong/Documents/my_eBooks/mLearning/introduction_to_variatinal_autoencoders.pdf) <
-
 Angelino, 2016, [Patterns of Scalable Bayesian Inference](https://www.nowpublishers.com/article/Details/MAL-052)
 
 Nowozin, 2011, [Structured Learning and Prediction in Computer Vision](http://www.nowozin.net/sebastian/papers/nowozin2011structured-tutorial.pdf) <
 
-Books:
+Books or Monograph:
+
+Kingma and Welling, 2019, [An Introduction to Variational Autoencoders](file:///home/dong/Documents/my_eBooks/mLearning/introduction_to_variatinal_autoencoders.pdf) 
 
 Sutton, 2010, [An Introduction to Conditional Random Fields](https://homepages.inf.ed.ac.uk/csutton/publications/crftut-fnt.pdf)
 
@@ -71,11 +46,7 @@ Wainwright, 2008, [Graphical Models, Exponential Families, and Variational Infer
 
 Koller, 2009, [Probabilistic graphical models: principles and techniques](file:///home/dong/Documents/my_eBooks/mLearning/probabilistic_graphical_models_principles_techniques.pdf)
 
-**Thesis CACHE**:
-
 Mark Rowland, 2018, [Structure in Machine Learning: Graphical Models and Monte Carlo Methods](https://www.repository.cam.ac.uk/handle/1810/287479)
-
-**Thesis**:
 
 Yingzhen Li, 2018, [Approximate Inference: New Visions](https://www.repository.cam.ac.uk/handle/1810/277549)
 
@@ -98,17 +69,17 @@ Yuan Qi, 2005, [Extending Expectation Propagation for Graphical Models](https://
 Thomas P Minka, 2001, [A family of algorithms for approximate Bayesian inference](https://tminka.github.io/papers/ep/minka-thesis.pdf)
 
 
-<a id="orgb9e78b8"></a>
+<a id="orgda36ec6"></a>
 
 # Inference and Learning of PGMs
 
 
-<a id="org109157d"></a>
+<a id="org84564a6"></a>
 
 ## Inference methods and techniques
 
 
-<a id="org8a2a84f"></a>
+<a id="orga2413ea"></a>
 
 ### Application Consideration
 
@@ -120,10 +91,8 @@ Thomas P Minka, 2001, [A family of algorithms for approximate Bayesian inference
     
     Ref3: [Krahenbuhl, 2011, Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials](https://arxiv.org/abs/1210.5644)
 
-2.  Can I interpret tree-reweighted RENN as a mixture method of MF, LoopyBP and GBP (or even including TWBP) after convexcify its corresponding hypergraph?
 
-
-<a id="org2801ae0"></a>
+<a id="org43c9e4b"></a>
 
 ### Classical Inference Methods
 
@@ -148,12 +117,12 @@ Thomas P Minka, 2001, [A family of algorithms for approximate Bayesian inference
 6.  Convergence Analysis, Roosta, 2008, [Convergence Analysis of Reweighted Sum-Product Algorithms](https://ieeexplore.ieee.org/document/4599175)
 
 
-<a id="org25834a2"></a>
+<a id="orgd19ee4d"></a>
 
 ## Neural network based methods
 
 
-<a id="orga24d9fe"></a>
+<a id="org8661587"></a>
 
 ### Graphical Neural Networks
 
@@ -178,41 +147,60 @@ Thomas P Minka, 2001, [A family of algorithms for approximate Bayesian inference
     
     [Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators](https://arxiv.org/pdf/1905.12660.pdf)
 
-3.  RENN for MAP problem?
-
 More reference:
 
 [Scarselli, 2009, The graph neural network model](https://persagen.com/files/misc/scarselli2009graph.pdf)
 
 
-<a id="org4e653cd"></a>
+<a id="orgd867ca6"></a>
 
 ### Learning messages
 
 Lin, 2015, [Deeply Learning the Messages in Message Passing Inference](http://papers.nips.cc/paper/5791-deeply-learning-the-messages-in-message-passing-inference.pdf)
 
 
-<a id="org30aebfd"></a>
+<a id="org7ce1012"></a>
 
-### Variational mehtods
+### Variational methods
 
 NIPS, Tutorial 2016, [Variational Inference](https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf)
 
-Kingma and Welling, 2014, [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114)
+Kingma and Welling, 2014, Autoencoder: [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114)
 
-Kuleshov and Ermon, 2017, [Neural Variational Inference and Learning in Undirected Graphical Models](https://arxiv.org/abs/1711.02679)
+Kuleshov and Ermon, 2017, NVIL: [Neural Variational Inference and Learning in Undirected Graphical Models](https://arxiv.org/abs/1711.02679)
 
-Li, etc, 2020, [To Relieve Your Headache of Training an MRF, Take AdVIL](https://arxiv.org/abs/1901.08400)
+Li, etc, 2020, AdVIL: [To Relieve Your Headache of Training an MRF, Take AdVIL](https://arxiv.org/abs/1901.08400)
 
 Lazaro-Gredilla, 2019 (Vicarious AI), [Learning undirected models via query training](https://arxiv.org/abs/1912.02893)
 
+Sobolev and Vetrov, 2019, (Section 3 gives interesting discussion on literature works) [Importance Weighted Hierarchical Variational Inference](http://papers.nips.cc/paper/8350-importance-weighted-hierarchical-variational-inference)
 
-<a id="orgdd1af7a"></a>
+Kingma, et al, 2016, [Improved Variational Inference with Inverse Autoregressive Flow](https://papers.nips.cc/paper/6581-improved-variational-inference-with-inverse-autoregressive-flow)
+
+Rezende, Mohamed, 2015, [Variational Inference with Normalizing Flows](https://arxiv.org/abs/1505.05770)
+
+
+<a id="org657febd"></a>
+
+### Neural density function estimation
+
+Chen et al, 2018, ODE: [Neural Ordinary Differential Equations](https://papers.nips.cc/paper/7892-neural-ordinary-differential-equations)
+
+Kingma, Dhariwal, 2018, [Glow: Generative Flow with Invertible 1x1 Convolutions](https://arxiv.org/abs/1807.03039)
+
+Dinh, Sohl-Dickstein, Bengio, 2017, [Density Estimation using Real NVP](https://arxiv.org/pdf/1605.08803.pdf)
+
+Dinh, Krueger, Bengio, 2014, [NICE: Non-linear independent component estimation](https://arxiv.org/abs/1410.8516)
+
+Inverse autoregreeeive flow as in previous subsection.
+
+
+<a id="org3a8c1dc"></a>
 
 ## Learning of Graphical Models
 
 
-<a id="org7195232"></a>
+<a id="org95447f8"></a>
 
 ### Parameter Learning
 
@@ -241,252 +229,57 @@ Lazaro-Gredilla, 2019 (Vicarious AI), [Learning undirected models via query trai
     NIPS, Tutorial 2016, [Variational Inference](https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf)
 
 
-<a id="org74025f9"></a>
+<a id="org1480a13"></a>
 
-### Structure/graph Learning
+# PGM and Decision-making in Dynamic Systems
 
-Todo: add refereces, RCN, AndOr graphs etc.
+-   Sutton, Barto, 2018, [Reinforcement learning (2ed edition)](https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions)
 
+-   Bubeck, Cesa-Bianchi, 2012, [Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/SurveyBCB12.pdf), Now publisher, Foundations and trends in machine learning
 
-<a id="orgf5c95a5"></a>
+-   Ziebart, 2010, [Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy](https://www.cs.cmu.edu/~bziebart/publications/thesis-bziebart.pdf)
 
-## Sparks
+-   Levin, 2018, [Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review](https://arxiv.org/abs/1805.00909)
 
+-   Haarnoja, et al 2017, [Reinforcement Learning with Deep Energy-Based Policies](https://arxiv.org/pdf/1702.08165.pdf)
 
-<a id="org049e070"></a>
+-   Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming
 
-### Applying RENN for Conditional Random Field
-
-1.  RENN for conditional RBM
-
-2.  RENN for high-order HMM
+-   Szepesvari, 2009, [Algorithms for Reinforcement Learning](https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs-lecture.pdf)
 
 
-<a id="org7f6946a"></a>
+<a id="orgc376de3"></a>
 
-### Hierarchical model: RCN + RENN
+## Courses
 
-
-<a id="orgda3bb38"></a>
-
-### HMM+GMs
-
-1.  Apply to acoustic signal detection
-    
-    1.1 <font color="green">Derivatives Done</font>
-    
-    1.2 <font color="orange">Experiments underoging</font>
-    
-    1.3 [A Hidden Markov Model Variant for Sequence Classification](https://www.ijcai.org/Proceedings/11/Papers/203.pdf), variant classification tricks from HMM
-
-2.  Apply to planning
+-   [Reinforcement Learning (UCL)](https://www.davidsilver.uk/teaching/)
+-   [Deep Reinforcement Learning (CS285)](http://rail.eecs.berkeley.edu/deeprlcourse/)
+-   [Advanced Deep Learning & Reinforcement Learning](https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs)
 
 
-<a id="orga91b1e3"></a>
+<a id="orgf1a0560"></a>
 
-### HRCF for bio-medical application
+# In connecting with others
 
-1.  Pure tractable density functions + BP or RENN
+-   [Repos: Advanced-variational-inference-paper](https://github.com/otokonoko8/implicit-variational-inference)
 
-2.  NN based emission probability + BP or RENN
-
-
-<a id="org7b45191"></a>
-
-### flow+EM
-
-1.  <font color="green"> EM guides mixture building of probabilistic model</font>
-2.  How about using DCT/wavelet transform for our generative models?
-3.  Shall try EM with Ordinary Differential Equation?
+-   [Repos: Deep-Bayesian-nonparametrics-papers](https://github.com/otokonoko8/deep-Bayesian-nonparametrics-papers)
 
 
-<a id="org2f69a3c"></a>
+<a id="orgd99e34b"></a>
 
-### flow-model based classification
-
-1.  <font color="green"> Maximum likelihood estimation done</font>
-2.  reform input x and class label as [x, c], the send [x, c] to go through invertible flow-model. To maximize the mutual information between x and c
+## GANs
 
 
-<a id="org5f6da32"></a>
-
-# Application of Graphical Models and Teaching
-
-
-<a id="org1493765"></a>
-
-## With HW
-
-1.  >  [Donoho, 2010, Message passingfor compressed sensing](https://ieeexplore.ieee.org/document/5503193) and [Donoho, 2009, AMP for compressed sensing](https://arxiv.org/abs/0907.3574)
-    
-    > [Rangan, 2018, VAMP](https://arxiv.org/abs/1610.03082)
-
-2.  OAMPNet, MMNet, [Adaptive Neural Signal Detection for Massive MIMO](https://arxiv.org/abs/1906.04610)
-    
-    How about to bring the VAMP (or generalized AMP by Rangan, 2012, prefer VAMP) into OAMPNet? Better than OAMPNet?
-
-3.  SSFN seems to be able as candidate ITERATIVE detection method for MIMO as MMNet.
-
-4.  Use RENN with and without readout net for MIMO detection
-
-5.  If NN based method does not give very good performance on non-binary support cases, may just use the equivalence condition to convert the non-binary MRF binary MRF, solve the problem and cast the solution back.
-
-
-<a id="org8b2e138"></a>
-
-# GANs
-
-
-<a id="org4fc808a"></a>
-
-## Redefine the target of GAN
-
-1.  Try to define the targets of GAN as combinational conditionals distributions/combination of sample logics instead of joint decisions. Then the complex decision can be made by combination of simple logics.
-
-
-<a id="org29b5542"></a>
-
-## Current design EOT-GAN help robust classification design/large-scale imaginary classification/ semi-supervised learning?
-
-
-<a id="orga5b23b7"></a>
-
-## Coverlutional lay bounded design, for lipschitz property
-
-<del>First step for the reference(random circulate coverlutional matrix), see if useful</del>
-
-
-<a id="org81a179b"></a>
+<a id="orgc543275"></a>
 
 ## Discrete GAN or RBM or Autoencoder
 
 
-<a id="org22e95e7"></a>
+<a id="org817015e"></a>
 
-## OT incremental building
+## Optimal Transport (likelihood-free learning)
 
-
-<a id="org344b4be"></a>
-
-### Additive Building:
-
-[Discussion with Baptiste on additive para \(\gamma\), remaining question: how to optimize Q](images/GAN/incremental_building/P81115-111945.jpg)
-
-<del>**\*** How about using barycenters model to do the incremental building?</del>
-
-
-<a id="orgfaf508b"></a>
-
-### seems one-to-mutiple barycenter computation is a base-line of mixture
-
-
-<a id="orgd30e3b1"></a>
-
-### Concatenating Building
-
-OT is equivalent or leq than autoencoder structured autoencoder:
-
-1.  consider the concatenation/progressive adding more mapping. See if each concatenation has complexity reduction, error bounding&#x2026; \(W(P_X,P_Y) \leq W(P_X, G1(Z1)) \leq W(X, G2(Z2)) \leq \cdots\)
-2.  \(W(P_X,P_Y) \leq W(P_X, G2(Z2)) \leq W(G1(Z1), G2(Z2))\), i.e. do alternative mapping twice, what is the benefits of solving \(W(G1(Z1), G2(Z2))\).
-3.  Consider adaboosing for condition of going deeper
-4.  cite:NIPS2017<sub>7126</sub> use beta-divergence for each mixture component generator optimization. This allow a training generator to omit tail samples during training. Empirical samples that are not captured during previous generator training will be put more weight and become high-weight samples for next generator training.
-
-5.  Use Gaussian random encoder, benefit: the latent divergence with prior (gaussian prior) can be analytically studied.
-
-
-<a id="org9c6638a"></a>
-
-## User GAN to learn context noise
-
-User GAN to learn context noise distribution instead of signal itself. Then apply learned noise to signal. 
-
-
-<a id="orgc2cf903"></a>
-
-## HMM+GMM+OT/GAN
-
-HMM+GMM models perform good enough in clean/non-noise scenarios/context. But in heavy-noise scenario, it works poor.
-\(P_X\), the signal distribution itself or the feature distribution after MFCC, is not GMM but is modeled as GMM. So, how about learning the transformation \(P_X \rightarrow Q_X\) to make \(Q_X\) is Mixture Gaussian.
-
-[Discussion with Saikat on application of OT to HMM](images/GAN/hmm/hmm_ot.jpg)
-
-
-<a id="org8018bea"></a>
-
-## Using EOT for Coreset finding or generating
-
-1.  Using EOT to compute coreset
-2.  Using EOT to train generative model to generate coreset. It is ok for mode collapse.
-3.  How about using beta-divergence for coreset problem?
-
-
-<a id="org5c4b6a2"></a>
-
-## convex duality (Farnia):
-
-
-<a id="org236111f"></a>
-
-# Robustness
-
-
-<a id="org980dc47"></a>
-
-## ROBUST probability learning
-
-1.  try to use measure that is robust to noisy samples or outlier, such as beta-estimation, beta divergence, useVAE do the generator may solve the probability of g
-
-
-<a id="org6fc1acc"></a>
-
-## minmax problem:
-
-1.  robust linear clissifier + feature mapping: for robustness against noise and attack
-
-2.  Minmax learning for remote prediction, find the connection to anto-encoder and GAN, do information bottleneck work, try to see (mutual information estimation in estimation information flow in DNN helps or not)
-3.  Find OT distance in pix space and feature space, what is the condition for the eqvilence? then use ot upper bound to try the minmax problem&#x2026; target: extend the problem into general case, not just linear dicision rule.
-
-
-<a id="orga6f4363"></a>
-
-## [Discussion with Hossein](images/robustness/adversarial_sample.jpg)
-
-
-<a id="org2e88eb4"></a>
-
-# Interpretable Methods and Explanations
-
-A general framework for learning different kinds of explanations for black box algorithms is proposed and experimentedcite:fong2017interpretable.
-Google's interpretability tool: [lucid@github](https://github.com/tensorflow/lucid).
-
-1.  Use lucid to study the inference propagation over CNN or its variants
-2.  What is the relationship between salience map and neural network sparsity.
-    
-    cite:fong2017interpretable proposes two test rules for leanring/inference algorithms: 1. classification itself 2. rotation perturbation on input. Regulation formulas are proposed. Deletion, noise and bluring on input images are experimented and discussed.
-
-
-<a id="org95f1ae3"></a>
-
-## Bayesian Learning
-
-
-<a id="org470c5d7"></a>
-
-# Record of reading
-
-
-<a id="orgdb9f549"></a>
-
-## Causal Inference
-
-cite:pearl2018theoretical explains the theoretical limits of current
-state-of-art machine learning that are mostly based on statistical methods.
-
-
-<a id="org12a41d0"></a>
-
-# Reference
-
-bibliographystyle:unsrt
-bibliography:mLearningMemo.bib
+&#x2026; Matthed Thorpe, 2018, [Introduction to Optimal Transport](http://www.math.cmu.edu/~mthorpe/OTNotes)
+&#x2026; Peyre, Cuturi, 2018, Computational Optimal Transport, [Codes and slides for OT](https://optimaltransport.github.io/resources/)
 
