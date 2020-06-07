@@ -3,7 +3,6 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-05-22 Fri 15:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Collection of Literature on Probabilistic Graphical Models</title>
@@ -234,41 +233,29 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgb1d3383">1. Book and Monograph on PGMs</a>
+<li><a href="#org36f679a">1. Book and Monograph on PGMs</a>
 <ul>
-<li><a href="#org02c2b3f">1.1. Books / Monograph:</a></li>
-<li><a href="#org899f6e6">1.2. Cached Region</a></li>
+<li><a href="#orgb93a068">1.1. Books / Monograph:</a></li>
+<li><a href="#org2324d5b">1.2. Cached Region</a></li>
 </ul>
 </li>
-<li><a href="#orgb3e4d10">2. Inference and Learning of PGMs Papers</a>
+<li><a href="#org8bacf9e">2. Inference and Learning of PGMs Papers</a>
 <ul>
-<li><a href="#org283786e">2.1. Inference methods and techniques</a>
-<ul>
-<li><a href="#orgf6a7919">2.1.1. Classical Inference Methods</a></li>
-<li><a href="#orgdaac951">2.1.2. Improvements</a></li>
-<li><a href="#org9334d3e">2.1.3. Application</a></li>
+<li><a href="#orgb12a1af">2.1. Inference methods and techniques</a></li>
+<li><a href="#orgccc8034">2.2. Neural network based methods</a></li>
+<li><a href="#org6b64aaf">2.3. Learning of Graphical Models</a></li>
 </ul>
 </li>
-<li><a href="#org8b07190">2.2. Neural network based methods</a>
+<li><a href="#org362dba8">3. PGM and Decision-making in Dynamic Systems</a>
 <ul>
-<li><a href="#org5e62646">2.2.1. Deep learning based methods</a></li>
-<li><a href="#orgf56e690">2.2.2. Variational methods</a></li>
-<li><a href="#org5b07d99">2.2.3. Neural density function estimation</a></li>
+<li><a href="#org21cfcd3">3.1. Courses</a></li>
 </ul>
 </li>
-<li><a href="#orga73c9d7">2.3. Learning of Graphical Models</a>
+<li><a href="#orgc171aa2">4. In Connecting with Others</a>
 <ul>
-<li><a href="#orgb455581">2.3.1. Parameter Learning</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgc1a8396">3. PGM and Decision-making in Dynamic Systems</a></li>
-<li><a href="#org8747276">4. In Connecting with Others</a>
-<ul>
-<li><a href="#orgb5f09f5">4.1. Repos</a></li>
-<li><a href="#orgf87b190">4.2. Courses</a></li>
-<li><a href="#orgf3eefee">4.3. Optimal Transport (likelihood-free learning)</a></li>
+<li><a href="#orgb5991a9">4.1. Repos on Variational Inference</a></li>
+<li><a href="#org5b48c34">4.2. GANs</a></li>
+<li><a href="#org8b54e2e">4.3. Optimal Transport (likelihood-free learning)</a></li>
 </ul>
 </li>
 </ul>
@@ -278,12 +265,12 @@ for the JavaScript code in this tag.
 <b><b>The collection of literature work on Probabilistic Graphical Models (PGMs). Source file can be found at git repository <a href="https://github.com/FirstHandScientist/pgm_map">pgm-map</a>.</b></b>
 </p>
 
-<div id="outline-container-orgb1d3383" class="outline-2">
-<h2 id="orgb1d3383"><span class="section-number-2">1</span> Book and Monograph on PGMs</h2>
+<div id="outline-container-org36f679a" class="outline-2">
+<h2 id="org36f679a"><span class="section-number-2">1</span> Book and Monograph on PGMs</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org02c2b3f" class="outline-3">
-<h3 id="org02c2b3f"><span class="section-number-3">1.1</span> Books / Monograph:</h3>
+<div id="outline-container-orgb93a068" class="outline-3">
+<h3 id="orgb93a068"><span class="section-number-3">1.1</span> Books / Monograph:</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Kingma and Welling, 2019, <a href="file:///home/dong/Documents/my_eBooks/mLearning/introduction_to_variatinal_autoencoders.pdf">An Introduction to Variational Autoencoders</a></li>
@@ -317,10 +304,11 @@ Minka:
 </div>
 </div>
 
-<div id="outline-container-org899f6e6" class="outline-3">
-<h3 id="org899f6e6"><span class="section-number-3">1.2</span> Cached Region</h3>
+<div id="outline-container-org2324d5b" class="outline-3">
+<h3 id="org2324d5b"><span class="section-number-3">1.2</span> Cached Region</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
+<li>Angelino, et al 2016, <a href="https://www.nowpublishers.com/article/Details/MAL-052">Patterns of Scalable Bayesian Inference</a></li>
 <li>Komodakis etc, 2016, <a href="https://www.nowpublishers.com/article/Details/CGV-066">(Hyper)-Graphs Inference through Convex Relaxations and Move Making Algorithms: Contributions and Applications in Artificial Vision</a></li>
 <li>Bogdan Savchynskyy, 2019, <a href="file:///home/dong/Documents/my_eBooks/mLearning/discrete_graphical_models_an_optimization_perspective.pdf">Discrete Graphical Models &#x2013; An Optimization Perspective</a></li>
 <li>Angelino, 2016, <a href="https://www.nowpublishers.com/article/Details/MAL-052">Patterns of Scalable Bayesian Inference</a></li>
@@ -330,19 +318,19 @@ Minka:
 </div>
 </div>
 
-<div id="outline-container-orgb3e4d10" class="outline-2">
-<h2 id="orgb3e4d10"><span class="section-number-2">2</span> Inference and Learning of PGMs Papers</h2>
+<div id="outline-container-org8bacf9e" class="outline-2">
+<h2 id="org8bacf9e"><span class="section-number-2">2</span> Inference and Learning of PGMs Papers</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org283786e" class="outline-3">
-<h3 id="org283786e"><span class="section-number-3">2.1</span> Inference methods and techniques</h3>
+<div id="outline-container-orgb12a1af" class="outline-3">
+<h3 id="orgb12a1af"><span class="section-number-3">2.1</span> Inference methods and techniques</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgf6a7919" class="outline-4">
-<h4 id="orgf6a7919"><span class="section-number-4">2.1.1</span> Classical Inference Methods</h4>
+<div id="outline-container-orgdfc1d14" class="outline-4">
+<h4 id="orgdfc1d14"><span class="section-number-4">2.1.1</span> Classical Inference Methods</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
-Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP
+Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP, EC
 </p>
 
 <ul class="org-ul">
@@ -351,13 +339,14 @@ Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP
 <li>Generalized BP for marginal distributions, Yedidis, et al, 2005, <a href="https://www.cs.princeton.edu/courses/archive/spring06/cos598C/papers/YedidaFreemanWeiss2004.pdf">Constructing free energy approximations and Generalized belief propagation algorithms</a></li>
 <li>Tree-structured EP, Minka and Qi, <a href="https://tminka.github.io/papers/eptree/minka-eptree.pdf">Tree-structured approximations by expectation propagation</a></li>
 <li>Convergence Analysis, Roosta, 2008, <a href="https://ieeexplore.ieee.org/document/4599175">Convergence Analysis of Reweighted Sum-Product Algorithms</a></li>
+<li>Opper, Winther, 2005, <a href="http://www.jmlr.org/papers/volume6/opper05a/opper05a.pdf">Expectation Consistent Approximate Inference</a></li>
+<li>Fletcher, 2017, <a href="https://arxiv.org/abs/1602.07795">Expectation Consistent Approximate Inference: Generalizations and Convergence</a></li>
 </ul>
 </div>
 </div>
 
-
-<div id="outline-container-orgdaac951" class="outline-4">
-<h4 id="orgdaac951"><span class="section-number-4">2.1.2</span> Improvements</h4>
+<div id="outline-container-orge0025db" class="outline-4">
+<h4 id="orge0025db"><span class="section-number-4">2.1.2</span> Improvements</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <ul class="org-ul">
 <li>Conditioning and Clamping
@@ -387,8 +376,8 @@ Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP
 </div>
 
 
-<div id="outline-container-org9334d3e" class="outline-4">
-<h4 id="org9334d3e"><span class="section-number-4">2.1.3</span> Application</h4>
+<div id="outline-container-orgfbb1bb6" class="outline-4">
+<h4 id="orgfbb1bb6"><span class="section-number-4">2.1.3</span> Application</h4>
 <div class="outline-text-4" id="text-2-1-3">
 <ul class="org-ul">
 <li><a href="https://papers.nips.cc/paper/9532-combining-generative-and-discriminative-models-for-hybrid-inference.pdf">Satorras, 2019, Combining Generative and Discriminative Models for Hybrid Inference</a></li>
@@ -399,15 +388,16 @@ Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP
 </div>
 </div>
 
-<div id="outline-container-org8b07190" class="outline-3">
-<h3 id="org8b07190"><span class="section-number-3">2.2</span> Neural network based methods</h3>
+<div id="outline-container-orgccc8034" class="outline-3">
+<h3 id="orgccc8034"><span class="section-number-3">2.2</span> Neural network based methods</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-org5e62646" class="outline-4">
-<h4 id="org5e62646"><span class="section-number-4">2.2.1</span> Deep learning based methods</h4>
+<div id="outline-container-org9a24812" class="outline-4">
+<h4 id="org9a24812"><span class="section-number-4">2.2.1</span> Deep learning based methods</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <ul class="org-ul">
 <li>Karaletsos, 2016, <a href="https://arxiv.org/abs/1612.05048">Adversarial Message Passing For Graphical Models</a></li>
+<li>Xiong et al, 2019, <a href="http://auai.org/uai2019/proceedings/papers/19.pdf">One-Shot Inference in Markov Random Fields</a></li>
 <li><p>
 Stoller et al, 2020, <a href="https://arxiv.org/pdf/1905.12660.pdf">Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators</a>
 </p>
@@ -430,13 +420,13 @@ Graphical Neural Networks
 <li>More generalized computation power: <a href="https://github.com/deepmind/graph_nets">Graph Net Library</a>, A graph network takes a graph as input and returns a graph as output.</li>
 <li>Related, <a href="https://github.com/dmlc/dgl">Deep Graph Library</a>, for deep learning on graphs</li>
 <li>Scarselli et al, 2009, <a href="https://persagen.com/files/misc/scarselli2009graph.pdf">The graph neural network model</a></li>
+<li>Satorras and Welling, 2020, <a href="https://arxiv.org/abs/2003.01998">Neural Enhanced Belief Propagation on Factor Graphs</a></li>
 </ul>
 </div>
 </div>
 
-
-<div id="outline-container-orgf56e690" class="outline-4">
-<h4 id="orgf56e690"><span class="section-number-4">2.2.2</span> Variational methods</h4>
+<div id="outline-container-orgef68ece" class="outline-4">
+<h4 id="orgef68ece"><span class="section-number-4">2.2.2</span> Variational methods</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <ul class="org-ul">
 <li>NIPS tutorial 2016, <a href="https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf">Variational Inference</a></li>
@@ -451,8 +441,8 @@ Graphical Neural Networks
 </div>
 </div>
 
-<div id="outline-container-org5b07d99" class="outline-4">
-<h4 id="org5b07d99"><span class="section-number-4">2.2.3</span> Neural density function estimation</h4>
+<div id="outline-container-org29bd103" class="outline-4">
+<h4 id="org29bd103"><span class="section-number-4">2.2.3</span> Neural density function estimation</h4>
 <div class="outline-text-4" id="text-2-2-3">
 <ul class="org-ul">
 <li>Chen et al, 2018, ODE: <a href="https://papers.nips.cc/paper/7892-neural-ordinary-differential-equations">Neural Ordinary Differential Equations</a></li>
@@ -465,12 +455,12 @@ Graphical Neural Networks
 </div>
 </div>
 
-<div id="outline-container-orga73c9d7" class="outline-3">
-<h3 id="orga73c9d7"><span class="section-number-3">2.3</span> Learning of Graphical Models</h3>
+<div id="outline-container-org6b64aaf" class="outline-3">
+<h3 id="org6b64aaf"><span class="section-number-3">2.3</span> Learning of Graphical Models</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-orgb455581" class="outline-4">
-<h4 id="orgb455581"><span class="section-number-4">2.3.1</span> Parameter Learning</h4>
+<div id="outline-container-org8b74d5f" class="outline-4">
+<h4 id="org8b74d5f"><span class="section-number-4">2.3.1</span> Parameter Learning</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <p>
 Learning graphical model parameters by approximate inference
@@ -506,11 +496,16 @@ Learning of Directed Graphs
 </div>
 </div>
 
-<div id="outline-container-orgc1a8396" class="outline-2">
-<h2 id="orgc1a8396"><span class="section-number-2">3</span> PGM and Decision-making in Dynamic Systems</h2>
+
+<div id="outline-container-org362dba8" class="outline-2">
+<h2 id="org362dba8"><span class="section-number-2">3</span> PGM and Decision-making in Dynamic Systems</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Sutton, Barto, 2018, <a href="https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions">Reinforcement learning (2ed edition)</a></li>
+
+<li>Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming</li>
+
+<li>Francois-Lavet, et al 2018, <a href="https://arxiv.org/abs/1811.12560">An Introduction to Deep Reinforcement Learning</a></li>
 
 <li>Bubeck, Cesa-Bianchi, 2012, <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/SurveyBCB12.pdf">Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems</a></li>
 
@@ -520,21 +515,30 @@ Learning of Directed Graphs
 
 <li>Haarnoja, et al 2017, <a href="https://arxiv.org/pdf/1702.08165.pdf">Reinforcement Learning with Deep Energy-Based Policies</a></li>
 
-<li>Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming</li>
-
 <li>Szepesvari, 2009, <a href="https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs-lecture.pdf">Algorithms for Reinforcement Learning</a></li>
 </ul>
 </div>
+
+
+<div id="outline-container-org21cfcd3" class="outline-3">
+<h3 id="org21cfcd3"><span class="section-number-3">3.1</span> Courses</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><a href="https://www.davidsilver.uk/teaching/">Reinforcement Learning (UCL)</a></li>
+<li><a href="http://rail.eecs.berkeley.edu/deeprlcourse/">Deep Reinforcement Learning (CS285)</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs">Advanced Deep Learning &amp; Reinforcement Learning</a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
-
-<div id="outline-container-org8747276" class="outline-2">
-<h2 id="org8747276"><span class="section-number-2">4</span> In Connecting with Others</h2>
+<div id="outline-container-orgc171aa2" class="outline-2">
+<h2 id="orgc171aa2"><span class="section-number-2">4</span> In Connecting with Others</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgb5f09f5" class="outline-3">
-<h3 id="orgb5f09f5"><span class="section-number-3">4.1</span> Repos</h3>
+<div id="outline-container-orgb5991a9" class="outline-3">
+<h3 id="orgb5991a9"><span class="section-number-3">4.1</span> Repos on Variational Inference</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Repos: <a href="https://github.com/otokonoko8/implicit-variational-inference">Advanced-variational-inference-paper</a></li>
@@ -543,19 +547,20 @@ Learning of Directed Graphs
 </div>
 </div>
 
-<div id="outline-container-orgf87b190" class="outline-3">
-<h3 id="orgf87b190"><span class="section-number-3">4.2</span> Courses</h3>
+
+
+<div id="outline-container-org5b48c34" class="outline-3">
+<h3 id="org5b48c34"><span class="section-number-3">4.2</span> GANs</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
-<li><a href="https://www.davidsilver.uk/teaching/">Reinforcement Learning (UCL)</a></li>
-<li><a href="http://rail.eecs.berkeley.edu/deeprlcourse/">Deep Reinforcement Learning (CS285)</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs">Advanced Deep Learning &amp; Reinforcement Learning</a></li>
+<li>Literature collection: <a href="https://github.com/hindupuravinash/the-gan-zoo">GAN-zoo</a></li>
+<li>Repos: <a href="https://github.com/znxlwm/pytorch-generative-model-collections">Generative adversarial networks</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgf3eefee" class="outline-3">
-<h3 id="orgf3eefee"><span class="section-number-3">4.3</span> Optimal Transport (likelihood-free learning)</h3>
+<div id="outline-container-org8b54e2e" class="outline-3">
+<h3 id="org8b54e2e"><span class="section-number-3">4.3</span> Optimal Transport (likelihood-free learning)</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li>Matthed Thorpe, 2018, <a href="http://www.math.cmu.edu/~mthorpe/OTNotes">Introduction to Optimal Transport</a></li>
@@ -567,7 +572,6 @@ Learning of Directed Graphs
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Dong</p>
-<p class="date">Created: 2020-05-22 Fri 15:02</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

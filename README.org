@@ -1,7 +1,8 @@
 #+TITLE: A Collection of Literature on Probabilistic Graphical Models
 #+LATEX_COMPILER: pdflatex
-#+options: toc:t
+#+options: toc:2
 #+MACRO: color @@html:<font color="$1">$2</font>@@
+#+OPTIONS: timestamp:nil
 
 **The collection of literature work on Probabilistic Graphical Models (PGMs). Source file can be found at git repository [[https://github.com/FirstHandScientist/pgm_map][pgm-map]].**
 # org-md-export-to-markdown
@@ -32,6 +33,7 @@
 
 ** Cached Region
 
+- Angelino, et al 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]
 - Komodakis etc, 2016, [[https://www.nowpublishers.com/article/Details/CGV-066][(Hyper)-Graphs Inference through Convex Relaxations and Move Making Algorithms: Contributions and Applications in Artificial Vision]]
 - Bogdan Savchynskyy, 2019, [[file:~/Documents/my_eBooks/mLearning/discrete_graphical_models_an_optimization_perspective.pdf][Discrete Graphical Models -- An Optimization Perspective]]
 - Angelino, 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]  
@@ -42,14 +44,15 @@
 ** Inference methods and techniques
 *** Classical Inference Methods
 
-    Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP
+    Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP, EC
 
 - Wainwright and Willsky, 2003, [[https://papers.nips.cc/paper/2206-exact-map-estimates-by-hypertree-agreement.pdf][Exact MAP estimates by hypertree agreement]]
 - Wainwright et al, 2003, [[http://ssg.mit.edu/group/willsky/publ_pdfs/166_pub_AISTATS.pdf][tree-reweighted belief propagation algorithms and approximated ML esimation by pseudo-moment matching]]
 - Generalized BP for marginal distributions, Yedidis, et al, 2005, [[https://www.cs.princeton.edu/courses/archive/spring06/cos598C/papers/YedidaFreemanWeiss2004.pdf][Constructing free energy approximations and Generalized belief propagation algorithms]]
 - Tree-structured EP, Minka and Qi, [[https://tminka.github.io/papers/eptree/minka-eptree.pdf][Tree-structured approximations by expectation propagation]]
 - Convergence Analysis, Roosta, 2008, [[https://ieeexplore.ieee.org/document/4599175][Convergence Analysis of Reweighted Sum-Product Algorithms]]
-
+- Opper, Winther, 2005, [[http://www.jmlr.org/papers/volume6/opper05a/opper05a.pdf][Expectation Consistent Approximate Inference]]
+- Fletcher, 2017, [[https://arxiv.org/abs/1602.07795][Expectation Consistent Approximate Inference: Generalizations and Convergence]]
 
 *** Improvements
 
@@ -80,6 +83,7 @@
 *** Deep learning based methods
 
 - Karaletsos, 2016, [[https://arxiv.org/abs/1612.05048][Adversarial Message Passing For Graphical Models]]
+- Xiong et al, 2019, [[http://auai.org/uai2019/proceedings/papers/19.pdf][One-Shot Inference in Markov Random Fields]]
 - Stoller et al, 2020, [[https://arxiv.org/pdf/1905.12660.pdf][Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators]]
 
   Learning messages
@@ -94,7 +98,7 @@ Graphical Neural Networks
 - More generalized computation power: [[https://github.com/deepmind/graph_nets][Graph Net Library]], A graph network takes a graph as input and returns a graph as output.
 - Related, [[https://github.com/dmlc/dgl][Deep Graph Library]], for deep learning on graphs
 - Scarselli et al, 2009, [[https://persagen.com/files/misc/scarselli2009graph.pdf][The graph neural network model]]
-    
+- Satorras and Welling, 2020, [[https://arxiv.org/abs/2003.01998][Neural Enhanced Belief Propagation on Factor Graphs]]    
 
 *** Variational methods   
     
@@ -136,9 +140,14 @@ Learning of Directed Graphs
 - Mnih and Gregor, 2014, [[https://arxiv.org/abs/1402.0030][Neural Variational Inference and Learning in Belief Networks]]
 - NIPS tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
 
+
 * PGM and Decision-making in Dynamic Systems
 
 + Sutton, Barto, 2018, [[https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions][Reinforcement learning (2ed edition)]]
+
++ Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming
+
++ Francois-Lavet, et al 2018, [[https://arxiv.org/abs/1811.12560][An Introduction to Deep Reinforcement Learning]] 
 
 + Bubeck, Cesa-Bianchi, 2012, [[https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/SurveyBCB12.pdf][Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems]] 
 
@@ -148,16 +157,8 @@ Learning of Directed Graphs
 
 + Haarnoja, et al 2017, [[https://arxiv.org/pdf/1702.08165.pdf][Reinforcement Learning with Deep Energy-Based Policies]]
   
-+ Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming
-  
 + Szepesvari, 2009, [[https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs-lecture.pdf][Algorithms for Reinforcement Learning]]
 
-
-    
-* In Connecting with Others
-** Repos
-+ Repos: [[https://github.com/otokonoko8/implicit-variational-inference][Advanced-variational-inference-paper]]
-+ Repos: [[https://github.com/otokonoko8/deep-Bayesian-nonparametrics-papers][Deep-Bayesian-nonparametrics-papers]] 
 
 ** Courses
 
@@ -165,8 +166,20 @@ Learning of Directed Graphs
 - [[http://rail.eecs.berkeley.edu/deeprlcourse/][Deep Reinforcement Learning (CS285)]]
 - [[https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs][Advanced Deep Learning & Reinforcement Learning]]
 
+    
+* In Connecting with Others
+
+** Repos on Variational Inference
++ Repos: [[https://github.com/otokonoko8/implicit-variational-inference][Advanced-variational-inference-paper]]
++ Repos: [[https://github.com/otokonoko8/deep-Bayesian-nonparametrics-papers][Deep-Bayesian-nonparametrics-papers]] 
+
+
   
-# ** GANs
+** GANs
+
++ Literature collection: [[https://github.com/hindupuravinash/the-gan-zoo][GAN-zoo]]
++ Repos: [[https://github.com/znxlwm/pytorch-generative-model-collections][Generative adversarial networks]]
+
 
 # ** Discrete GAN or RBM or Autoencoder
 
@@ -174,3 +187,6 @@ Learning of Directed Graphs
 
 - Matthed Thorpe, 2018, [[http://www.math.cmu.edu/~mthorpe/OTNotes][Introduction to Optimal Transport]]
 - Peyre, Cuturi, 2018, Computational Optimal Transport, [[https://optimaltransport.github.io/resources/][Codes and slides for OT]]
+
+
+
