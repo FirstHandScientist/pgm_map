@@ -45,7 +45,7 @@
 ** Inference methods and techniques
 *** Classical Inference Methods
 
-    Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP, EC, VMP
+
 
 - Fletcher, 2017, [[https://arxiv.org/abs/1602.07795][Expectation Consistent Approximate Inference: Generalizations and Convergence]]
 - Convergence Analysis, Roosta, 2008, [[https://ieeexplore.ieee.org/document/4599175][Convergence Analysis of Reweighted Sum-Product Algorithms]]
@@ -86,8 +86,20 @@
 - [[https://arxiv.org/abs/1210.5644][Krahenbuhl, 2011, Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials]]
 
 
-** Black-box VI
+
+*** Variational methods   
+    
+- NIPS tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
+- Kingma and Welling, 2014, Autoencoder: [[https://arxiv.org/abs/1312.6114][Auto-Encoding Variational Bayes]]  
+- Kuleshov and Ermon, 2017, NVIL: [[https://arxiv.org/abs/1711.02679][Neural Variational Inference and Learning in Undirected Graphical Models]]
+- Li, etc, 2020, AdVIL: [[https://arxiv.org/abs/1901.08400][To Relieve Your Headache of Training an MRF, Take AdVIL]]
+- Lazaro-Gredilla, 2019 (Vicarious AI), [[https://arxiv.org/abs/1912.02893][Learning undirected models via query training]]
+- Sobolev and Vetrov, 2019, (Section 3 gives interesting discussion on literature works) [[http://papers.nips.cc/paper/8350-importance-weighted-hierarchical-variational-inference][Importance Weighted Hierarchical Variational Inference]]
+- Kingma, et al, 2016, [[https://papers.nips.cc/paper/6581-improved-variational-inference-with-inverse-autoregressive-flow][Improved Variational Inference with Inverse Autoregressive Flow]]  
+- Rezende, Mohamed, 2015, [[https://arxiv.org/abs/1505.05770][Variational Inference with Normalizing Flows]]
+
 - Domke, 2019, [[https://arxiv.org/abs/1901.08431][Provable Smoothness Guarantees for Black-Box Variational Inference]]
+- Blei, 2017, [[https://amstat.tandfonline.com/doi/pdf/10.1080/01621459.2017.1285773?needAccess=true][Variational Inference: A Review for Statisticians]]
 - Regier et al, 2017, [[https://papers.nips.cc/paper/6834-fast-black-box-variational-inference-through-stochastic-trust-region-optimization.pdf][Fast Black-box Variational Inferencethrough Stochastic Trust-Region Optimization]]
 - Kucukelbir et al, 2016, [[https://arxiv.org/pdf/1603.00788.pdf][Automatic differentiation variational inference]]
 - Black-box alpha, 2016, [[http://proceedings.mlr.press/v48/hernandez-lobatob16.pdf][Black-box alpha-divergence minimization]]
@@ -96,11 +108,10 @@
 ** Neural network based methods
 *** Deep learning based methods
 
-- Karaletsos, 2016, [[https://arxiv.org/abs/1612.05048][Adversarial Message Passing For Graphical Models]]
-- Xiong et al, 2019, [[http://auai.org/uai2019/proceedings/papers/19.pdf][One-Shot Inference in Markov Random Fields]]
 - Stoller et al, 2020, [[https://arxiv.org/pdf/1905.12660.pdf][Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators]]
+- Karaletsos, 2016, [[https://arxiv.org/abs/1612.05048][Adversarial Message Passing For Graphical Models]]
 
-  Learning messages
+Learning messages
 
 - Heess et al, [[https://papers.nips.cc/paper/5070-learning-to-pass-expectation-propagation-messages.pdf][Learning to Pass Expectation Propagation Messages]], half-automated message passing, message-level automation
 - Yoon et al, 2018, [[https://arxiv.org/abs/1803.07710][Inference in Probabilistic Graphical Models by Graph Neural Networks]]    
@@ -114,16 +125,6 @@ Graphical Neural Networks
 - Scarselli et al, 2009, [[https://persagen.com/files/misc/scarselli2009graph.pdf][The graph neural network model]]
 - Satorras and Welling, 2020, [[https://arxiv.org/abs/2003.01998][Neural Enhanced Belief Propagation on Factor Graphs]]    
 
-*** Variational methods   
-    
-- NIPS tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
-- Kingma and Welling, 2014, Autoencoder: [[https://arxiv.org/abs/1312.6114][Auto-Encoding Variational Bayes]]  
-- Kuleshov and Ermon, 2017, NVIL: [[https://arxiv.org/abs/1711.02679][Neural Variational Inference and Learning in Undirected Graphical Models]]
-- Li, etc, 2020, AdVIL: [[https://arxiv.org/abs/1901.08400][To Relieve Your Headache of Training an MRF, Take AdVIL]]
-- Lazaro-Gredilla, 2019 (Vicarious AI), [[https://arxiv.org/abs/1912.02893][Learning undirected models via query training]]
-- Sobolev and Vetrov, 2019, (Section 3 gives interesting discussion on literature works) [[http://papers.nips.cc/paper/8350-importance-weighted-hierarchical-variational-inference][Importance Weighted Hierarchical Variational Inference]]
-- Kingma, et al, 2016, [[https://papers.nips.cc/paper/6581-improved-variational-inference-with-inverse-autoregressive-flow][Improved Variational Inference with Inverse Autoregressive Flow]]  
-- Rezende, Mohamed, 2015, [[https://arxiv.org/abs/1505.05770][Variational Inference with Normalizing Flows]]
 
 *** Neural density function estimation
 - Chen et al, 2018, ODE: [[https://papers.nips.cc/paper/7892-neural-ordinary-differential-equations][Neural Ordinary Differential Equations]]
