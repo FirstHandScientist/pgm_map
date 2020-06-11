@@ -18,6 +18,12 @@
 - Mark Rowland, 2018, [[https://www.repository.cam.ac.uk/handle/1810/287479][Structure in Machine Learning: Graphical Models and Monte Carlo Methods]]
 - Yingzhen Li, 2018, [[https://www.repository.cam.ac.uk/handle/1810/277549][Approximate Inference: New Visions]]
 - Adrian Weller, 2014, [[http://mlg.eng.cam.ac.uk/adrian/phd_FINAL.pdf][Methods for Inference in Graphical Models]]
+# Cached Region
+- Angelino, et al 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]
+- Komodakis etc, 2016, [[https://www.nowpublishers.com/article/Details/CGV-066][(Hyper)-Graphs Inference through Convex Relaxations and Move Making Algorithms: Contributions and Applications in Artificial Vision]]
+- Bogdan Savchynskyy, 2019, [[file:~/Documents/my_eBooks/mLearning/discrete_graphical_models_an_optimization_perspective.pdf][Discrete Graphical Models -- An Optimization Perspective]]
+- Angelino, 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]  
+- Nowozin, 2011, [[http://www.nowozin.net/sebastian/papers/nowozin2011structured-tutorial.pdf][Structured Learning and Prediction in Computer Vision]]
 
   Ihler, Alexander:
 
@@ -31,13 +37,6 @@
 - Yuan Qi, 2005, [[https://affect.media.mit.edu/pdfs/05.qi-phd.pdf][Extending Expectation Propagation for Graphical Models]]
 - Thomas P Minka, 2001, [[https://tminka.github.io/papers/ep/minka-thesis.pdf][A family of algorithms for approximate Bayesian inference]]
 
-** Cached Region
-
-- Angelino, et al 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]
-- Komodakis etc, 2016, [[https://www.nowpublishers.com/article/Details/CGV-066][(Hyper)-Graphs Inference through Convex Relaxations and Move Making Algorithms: Contributions and Applications in Artificial Vision]]
-- Bogdan Savchynskyy, 2019, [[file:~/Documents/my_eBooks/mLearning/discrete_graphical_models_an_optimization_perspective.pdf][Discrete Graphical Models -- An Optimization Perspective]]
-- Angelino, 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]  
-- Nowozin, 2011, [[http://www.nowozin.net/sebastian/papers/nowozin2011structured-tutorial.pdf][Structured Learning and Prediction in Computer Vision]]
 
 
 * Inference and Learning of PGMs Papers
