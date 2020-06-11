@@ -1,6 +1,6 @@
 #+TITLE: A Collection of Literature on Probabilistic Graphical Models
 #+LATEX_COMPILER: pdflatex
-#+options: toc:2
+#+options: toc:nil
 #+MACRO: color @@html:<font color="$1">$2</font>@@
 #+OPTIONS: timestamp:nil
 
@@ -39,20 +39,22 @@
 - Angelino, 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]  
 - Nowozin, 2011, [[http://www.nowozin.net/sebastian/papers/nowozin2011structured-tutorial.pdf][Structured Learning and Prediction in Computer Vision]]
 
+
 * Inference and Learning of PGMs Papers
 
 ** Inference methods and techniques
 *** Classical Inference Methods
 
-    Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP, EC
+    Hand-crafted message passing, BP, GBP, Tree-reweighted BP and EP, PowerEP, EC, VMP
 
-- Wainwright and Willsky, 2003, [[https://papers.nips.cc/paper/2206-exact-map-estimates-by-hypertree-agreement.pdf][Exact MAP estimates by hypertree agreement]]
-- Wainwright et al, 2003, [[http://ssg.mit.edu/group/willsky/publ_pdfs/166_pub_AISTATS.pdf][tree-reweighted belief propagation algorithms and approximated ML esimation by pseudo-moment matching]]
+- Fletcher, 2017, [[https://arxiv.org/abs/1602.07795][Expectation Consistent Approximate Inference: Generalizations and Convergence]]
+- Convergence Analysis, Roosta, 2008, [[https://ieeexplore.ieee.org/document/4599175][Convergence Analysis of Reweighted Sum-Product Algorithms]]
 - Generalized BP for marginal distributions, Yedidis, et al, 2005, [[https://www.cs.princeton.edu/courses/archive/spring06/cos598C/papers/YedidaFreemanWeiss2004.pdf][Constructing free energy approximations and Generalized belief propagation algorithms]]
 - Tree-structured EP, Minka and Qi, [[https://tminka.github.io/papers/eptree/minka-eptree.pdf][Tree-structured approximations by expectation propagation]]
-- Convergence Analysis, Roosta, 2008, [[https://ieeexplore.ieee.org/document/4599175][Convergence Analysis of Reweighted Sum-Product Algorithms]]
+- Winn & Bishop, 2005, [[http://www.jmlr.org/papers/volume6/winn05a/winn05a.pdf][Variational message passing]]
 - Opper, Winther, 2005, [[http://www.jmlr.org/papers/volume6/opper05a/opper05a.pdf][Expectation Consistent Approximate Inference]]
-- Fletcher, 2017, [[https://arxiv.org/abs/1602.07795][Expectation Consistent Approximate Inference: Generalizations and Convergence]]
+- Wainwright et al, 2003, [[http://ssg.mit.edu/group/willsky/publ_pdfs/166_pub_AISTATS.pdf][tree-reweighted belief propagation algorithms and approximated ML esimation by pseudo-moment matching]]
+- Wainwright and Willsky, 2003, [[https://papers.nips.cc/paper/2206-exact-map-estimates-by-hypertree-agreement.pdf][Exact MAP estimates by hypertree agreement]]
 
 *** Improvements
 
@@ -68,16 +70,28 @@
 
   - Liu et al, 2015, [[https://papers.nips.cc/paper/5695-probabilistic-variational-bounds-for-graphical-models][Probabilistic Variational Bounds for Graphical Models]]
   - Noorshams and Wainwright, 2013, [[https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6373728][stochastic belief propagation: a low-complexity alternative to the sum-product algorithm]]
+  - Lienart, et al, Expectation Particle Belief Propagation
+  - Ihler, McAllester, 2009, [[http://proceedings.mlr.press/v5/ihler09a/ihler09a.pdf][Particle Belief Propagation]]
 
 - Mixture/multi-modal
   - Baque et al, 2017, [[http://openaccess.thecvf.com/content_cvpr_2017/papers/Baque_Multi-Modal_Mean-Fields_via_CVPR_2017_paper.pdf][Multi-Modal Mean-Fields via Cardinality-Based Clamping]]
   - Hao Xiong et al, 2019, [[http://auai.org/uai2019/proceedings/papers/19.pdf][One-Shot Marginal MAP Inference in Markov Random Fields]]
 
+- Layered messages
+  - Jampani et al, 2015, [[http://proceedings.mlr.press/v38/jampani15.pdf][Consensus Message Passing for Layered Graphical Models]]
 
 *** Application
 - [[https://papers.nips.cc/paper/9532-combining-generative-and-discriminative-models-for-hybrid-inference.pdf][Satorras, 2019, Combining Generative and Discriminative Models for Hybrid Inference]]
 - [[https://arxiv.org/pdf/1502.03240.pdf][Zheng, 2019, Conditional Random Fields as Recurrent Neural Networks]]
 - [[https://arxiv.org/abs/1210.5644][Krahenbuhl, 2011, Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials]]
+
+
+** Black-box VI
+- Domke, 2019, [[https://arxiv.org/abs/1901.08431][Provable Smoothness Guarantees for Black-Box Variational Inference]]
+- Regier et al, 2017, [[https://papers.nips.cc/paper/6834-fast-black-box-variational-inference-through-stochastic-trust-region-optimization.pdf][Fast Black-box Variational Inferencethrough Stochastic Trust-Region Optimization]]
+- Kucukelbir et al, 2016, [[https://arxiv.org/pdf/1603.00788.pdf][Automatic differentiation variational inference]]
+- Black-box alpha, 2016, [[http://proceedings.mlr.press/v48/hernandez-lobatob16.pdf][Black-box alpha-divergence minimization]]
+- Ranganath et al, 2014, [[http://proceedings.mlr.press/v33/ranganath14.pdf][Black box variational inference]]
 
 ** Neural network based methods
 *** Deep learning based methods
@@ -118,6 +132,7 @@ Graphical Neural Networks
 - Dinh, Krueger, Bengio, 2014, [[https://arxiv.org/abs/1410.8516][NICE: Non-linear independent component estimation]]  
 - Inverse autoregreeeive flow as in previous subsection.
     
+
 ** Learning of Graphical Models
 
 *** Parameter Learning
