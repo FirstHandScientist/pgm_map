@@ -45,7 +45,7 @@
 *** Classical Inference Methods
 
 
-
+- Lee et al, 2019, EMP, [[https://arxiv.org/abs/1907.01127][Convergence rates of smooth message passing with rounding in entropy-regularized MAP inference]]
 - Fletcher, 2017, [[https://arxiv.org/abs/1602.07795][Expectation Consistent Approximate Inference: Generalizations and Convergence]]
 - Convergence Analysis, Roosta, 2008, [[https://ieeexplore.ieee.org/document/4599175][Convergence Analysis of Reweighted Sum-Product Algorithms]]
 - Generalized BP for marginal distributions, Yedidis, et al, 2005, [[https://www.cs.princeton.edu/courses/archive/spring06/cos598C/papers/YedidaFreemanWeiss2004.pdf][Constructing free energy approximations and Generalized belief propagation algorithms]]
@@ -57,11 +57,13 @@
 
 *** Improvements
 
-- Conditioning and Clamping
+- Conditioning, Clamping, Divide
 
+  - Zhou et al, 2020, [[https://arxiv.org/abs/1910.13324][Divide, Conquer, and Combine: a New Inference Strategy for Probabilistic Programs with Stochastic Support]]
   - Eaton and Ghahramani, 2009, [[http://mlg.eng.cam.ac.uk/pub/pdf/EatGha09.pdf][Choosing a Variable to Clamp]]
   - Geier et al, 2015, [[http://auai.org/uai2015/proceedings/papers/158.pdf][Locally Conditioned Belief Propagation]]
   - Weller and Jebara, 2014, [[https://papers.nips.cc/paper/5529-clamping-variables-and-approximate-inference.pdf][Clamping Variables and Approximate Inference]]
+  
 
 - Linear Response. Welling and Teh, [[https://www.ics.uci.edu/~welling/publications/papers/LR2.pdf][Linear Response Algorithms for Approximate Inference in Graphical Models]]
 
