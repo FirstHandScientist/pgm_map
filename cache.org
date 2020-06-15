@@ -78,15 +78,16 @@
     I should check the citations of this paper again. this is connected to 
     Jean-David Benamou, Guillaume Carlier, Marco Cu-turi, Luca Nenna, and Gabriel Peyr ́e.  Iterative Breg-man projections for regularized transportation prob-lems.SIAM Journal on Scientific Computing, 37(2):A1111–A1138, 2015
 
-  - [ ] Eunho Yang, Pradeep Ravikumar, Genevera I Allen, Zhandong Liu, Graphical models via univariate exponential family distributions
+  - [X] Eunho Yang, Pradeep Ravikumar, Genevera I Allen, Zhandong Liu, Graphical models via univariate exponential family distributions
 
-  - [ ] Vladimir Jojic, *Koller*, 2010, *Accelerated dual decomposition for MAP inference*
+  - [X] Vladimir Jojic, *Koller*, 2010, *Accelerated dual decomposition for MAP inference*
  
   - Message-Passing for Approximate MAP Inference with Latent Variables
   - 2011, MRF Energy Minimization and Beyond via Dual Decomposition
+  - [X] Tourani et al, 2018, [[https://hci.iwr.uni-heidelberg.de/vislearn/HTML/people/bogdan/publications/papers/tourani-mplp-plus-plus-eccv2018.pdf][MPLP++: Fast, Parallel Dual Block-Coordinate Ascent for Dense Graphical Models]]
 
 + AISTATS 2020
-  - Approximate Inference in Discrete Distributions with Monte Carlo Tree Search and Value Functions, Lars Buesing (DeepMind)*; Nicolas Heess (DeepMind); Theophane Weber (DeepMind)
+  - [X] Approximate Inference in Discrete Distributions with Monte Carlo Tree Search and Value Functions, Lars Buesing (DeepMind)*; Nicolas Heess (DeepMind); Theophane Weber (DeepMind)
 
   - A Rule for Gradient Estimator Selection, with an Application to Variational Inference, Tomas Geffner (UMass Amherst)*; Justin Domke (UMass Amherst)
 
@@ -94,7 +95,7 @@
 
   - MAP Inference for Customized Determinantal Point Processes via Maximum Inner Product Search, Insu Han (KAIST)*; Jennifer Gillenwater (Google)
 
-  - Amortized Inference of Variational Bounds for Learning Noisy-OR, Yiming Yan (University of Southern California)*; Melissa Ailem (University of Southern California); Fei Sha (Google Research)
+  - [X] Amortized Inference of Variational Bounds for Learning Noisy-OR, Yiming Yan (University of Southern California)*; Melissa Ailem (University of Southern California); Fei Sha (Google Research)
 
   - Logistic regression with peer-group effects via inference in higher-order Ising models, Constantinos Daskalakis (MIT); Nishanth Dikkala (MIT); Ioannis Panageas (SUTD)*
 
@@ -103,4 +104,4 @@
   - Stein Variational Inference for Discrete Distributions, Jun Han (Dartmouth College)*; Fan Ding (Beihang University); Xianglong Liu (Beihang University); Lorenzo Torresani (Dartmouth College & Facebook AI); Jian Peng (UIUC); Qiang Liu (UT Austin)
 
 + Others
-  - Blei, 2017, [[https://amstat.tandfonline.com/doi/pdf/10.1080/01621459.2017.1285773?needAccess=true][Variational Inference: A Review for Statisticians]]
+  - [X] Blei, 2017, [[https://amstat.tandfonline.com/doi/pdf/10.1080/01621459.2017.1285773?needAccess=true][Variational Inference: A Review for Statisticians]]
