@@ -25,14 +25,12 @@
 - Angelino, 2016, [[https://www.nowpublishers.com/article/Details/MAL-052][Patterns of Scalable Bayesian Inference]]  
 - Nowozin, 2011, [[http://www.nowozin.net/sebastian/papers/nowozin2011structured-tutorial.pdf][Structured Learning and Prediction in Computer Vision]]
 
-  Ihler, Alexander:
+- Dieng, Adji Bousso, 2020, [[https://academiccommons.columbia.edu/doi/10.7916/d8-rd60-nw75/download][Deep Probabilistic Graphical Modeling]]
 
 - Lou, Qi, 2018, [[https://escholarship.org/uc/item/7sc0m97f][Anytime Approximate Inference in Graphical Models]]
 - Ping, Wei, 2016, [[https://escholarship.org/uc/item/7q90z4b5][Learning and Inference in Latent Variable Graphical Models]]
 - Forouzan, Sholeh, 2015, [[https://escholarship.org/uc/item/5n4733cz][Approximate Inference in Graphical Models]]
 - Qiang, Liu, 2014, [[https://escholarship.org/uc/item/92p8w3xb][Reasoning and Decisions in Probabilistic Graphical Models - A Unified Framework]]
-
-  Minka:
 
 - Yuan Qi, 2005, [[https://affect.media.mit.edu/pdfs/05.qi-phd.pdf][Extending Expectation Propagation for Graphical Models]]
 - Thomas P Minka, 2001, [[https://tminka.github.io/papers/ep/minka-thesis.pdf][A family of algorithms for approximate Bayesian inference]]
@@ -54,6 +52,10 @@
 - Opper, Winther, 2005, [[http://www.jmlr.org/papers/volume6/opper05a/opper05a.pdf][Expectation Consistent Approximate Inference]]
 - Wainwright et al, 2003, [[http://ssg.mit.edu/group/willsky/publ_pdfs/166_pub_AISTATS.pdf][tree-reweighted belief propagation algorithms and approximated ML esimation by pseudo-moment matching]]
 - Wainwright and Willsky, 2003, [[https://papers.nips.cc/paper/2206-exact-map-estimates-by-hypertree-agreement.pdf][Exact MAP estimates by hypertree agreement]]
+ # MPA
+- Tourani et al, 2018, [[https://hci.iwr.uni-heidelberg.de/vislearn/HTML/people/bogdan/publications/papers/tourani-mplp-plus-plus-eccv2018.pdf][MPLP++: Fast, Parallel Dual Block-Coordinate Ascent for Dense Graphical Models]]
+- Haller et al, 2018, [[https://arxiv.org/abs/2004.06370][Exact MAP-Inference by Confining Combinatorial Search with LP Relaxation]]
+- Globerson, Jaakkola, 2008, [[https://papers.nips.cc/paper/3200-fixing-max-product-convergent-message-passing-algorithms-for-map-lp-relaxations.pdf][Fixing Max-Product: Convergent Message PassingAlgorithms for MAP LP-Relaxations]]
 
 *** Improvements
 
@@ -73,6 +75,7 @@
   - Noorshams and Wainwright, 2013, [[https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6373728][stochastic belief propagation: a low-complexity alternative to the sum-product algorithm]]
   - Lienart, et al, Expectation Particle Belief Propagation
   - Ihler, McAllester, 2009, [[http://proceedings.mlr.press/v5/ihler09a/ihler09a.pdf][Particle Belief Propagation]]
+  - Sudderth, [[http://ssg.mit.edu/nbp/][Nonparametric Belief Propagation]]
 
 - Mixture/multi-modal
   - Baque et al, 2017, [[http://openaccess.thecvf.com/content_cvpr_2017/papers/Baque_Multi-Modal_Mean-Fields_via_CVPR_2017_paper.pdf][Multi-Modal Mean-Fields via Cardinality-Based Clamping]]
@@ -111,6 +114,7 @@
 
 - Stoller et al, 2020, [[https://arxiv.org/pdf/1905.12660.pdf][Training Generative Adversarial Networks from Incomplete Observations using Factorised Discriminators]]
 - Karaletsos, 2016, [[https://arxiv.org/abs/1612.05048][Adversarial Message Passing For Graphical Models]]
+- Yiming Yan et al, 2019, [[https://arxiv.org/abs/1906.02428][Amortized Inference of Variational Bounds for Learning Noisy-OR]]
 
 Learning messages
 
@@ -145,11 +149,13 @@ Graphical Neural Networks
 - Tang, 2015, [[https://arxiv.org/abs/1503.01228][Bethe Learning of Conditional Random Fields via MAP Decoding]]
 - You Lu, 2019, [[https://www.aaai.org/ojs/index.php/AAAI/article/view/4357][Block Belief Propagation for Parameter Learning in Markov Random Fields]]
 - Hazan, 2016, [[http://www.jmlr.org/papers/v17/13-260.html][Blending Learning and Inference in Conditional Random Fields]]
+- Tang, etc, 2016, [[http://proceedings.mlr.press/v51/tang16a.pdf][Bethe Learning of Graphical Models via MAP Decoding]]
 
 Learning of MRF with neural networks
 
 - Wiseman and Kim, 2019, [[https://papers.nips.cc/paper/9687-amortized-bethe-free-energy-minimization-for-learning-mrfs.pdf][Amortized Bethe Free Energy Minimization for Learning MRFs]]
 - Kuleshov and Ermon, 2017, [[https://arxiv.org/abs/1711.02679][Neural Variational Inference and Learning in Undirected Graphical Models]]
+- Lazaro-Gredilla et al, 2020, [[https://arxiv.org/abs/2006.06803][Query Training: Learning and inference for directed and undirected graphical models]]
 
 Learning of Directed Graphs
 
@@ -158,8 +164,21 @@ Learning of Directed Graphs
 - NIPS tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
 
 
-* PGM and Decision-making in Dynamic Systems
+* PGM, Logic & Decision-making in Dynamic Systems
+** Dynamics
++ Kim, Ahn, Bengio, 2019, [[https://arxiv.org/pdf/1910.00775.pdf][Variational Temporal Abstraction]]
++ Linderman et al, 2017, [[http://proceedings.mlr.press/v54/linderman17a/linderman17a.pdf][Bayesian Learning and Inference in Recurrent Switching Linear Dynamical Systems]]
 
+** Logic 
+- [[https://dtai.cs.kuleuven.be/problog/index.html][ProbLog]]
+  + D. Fierens, G. Van den Broeck, 2015. Inference and learning in probabilistic logic programs using weighted Boolean formulas.   
+  + L. De Raedt, A. Kimmig and H. Toivonen, 2017. ProbLog: A probabilistic Prolog and its application in link discovery.
+
+- [[http://starai.cs.ucla.edu/slides/CS201.pdf][Probabilistic Circuit]]
+  + Yitao Liang, Guy Van den Broeck, [[https://arxiv.org/abs/1902.10798][Learning Logistic Circuits]]
+
+
+** Decision-making
 + Sutton, Barto, 2018, [[https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions][Reinforcement learning (2ed edition)]]
 
 + Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming
@@ -185,6 +204,9 @@ Learning of Directed Graphs
 
     
 * In Connecting with Others
+** [[https://github.com/arranger1044/awesome-spn][Awesome Sum-Product Networks]]
+
+** [[http://starai.cs.ucla.edu/code/][StarAI coll.]]
 
 ** Repos on Variational Inference
 + Repos: [[https://github.com/otokonoko8/implicit-variational-inference][Advanced-variational-inference-paper]]
