@@ -1,4 +1,4 @@
-#+TITLE: A Collection of Literature on Probabilistic Graphical Models
++TITLE: A Collection of Literature on Probabilistic Graphical Models
 #+LATEX_COMPILER: pdflatex
 #+options: toc:nil
 #+MACRO: color @@html:<font color="$1">$2</font>@@
@@ -34,6 +34,9 @@
 
 - Yuan Qi, 2005, [[https://affect.media.mit.edu/pdfs/05.qi-phd.pdf][Extending Expectation Propagation for Graphical Models]]
 - Thomas P Minka, 2001, [[https://tminka.github.io/papers/ep/minka-thesis.pdf][A family of algorithms for approximate Bayesian inference]]
+# David M. Blei
+- Dieng, Adji Bousso, 2020, [[https://academiccommons.columbia.edu/doi/10.7916/d8-gt4e-6m45][Deep Probabilistic Graphical Modeling]]
+
 
 
 
@@ -52,6 +55,7 @@
 - Opper, Winther, 2005, [[http://www.jmlr.org/papers/volume6/opper05a/opper05a.pdf][Expectation Consistent Approximate Inference]]
 - Wainwright et al, 2003, [[http://ssg.mit.edu/group/willsky/publ_pdfs/166_pub_AISTATS.pdf][tree-reweighted belief propagation algorithms and approximated ML esimation by pseudo-moment matching]]
 - Wainwright and Willsky, 2003, [[https://papers.nips.cc/paper/2206-exact-map-estimates-by-hypertree-agreement.pdf][Exact MAP estimates by hypertree agreement]]
+- Peters, Janzing, Scholkopf, 2017, Elements of Causal Inference.
  # MPA
 - Tourani et al, 2018, [[https://hci.iwr.uni-heidelberg.de/vislearn/HTML/people/bogdan/publications/papers/tourani-mplp-plus-plus-eccv2018.pdf][MPLP++: Fast, Parallel Dual Block-Coordinate Ascent for Dense Graphical Models]]
 - Haller et al, 2018, [[https://arxiv.org/abs/2004.06370][Exact MAP-Inference by Confining Combinatorial Search with LP Relaxation]]
@@ -65,7 +69,7 @@
   - Eaton and Ghahramani, 2009, [[http://mlg.eng.cam.ac.uk/pub/pdf/EatGha09.pdf][Choosing a Variable to Clamp]]
   - Geier et al, 2015, [[http://auai.org/uai2015/proceedings/papers/158.pdf][Locally Conditioned Belief Propagation]]
   - Weller and Jebara, 2014, [[https://papers.nips.cc/paper/5529-clamping-variables-and-approximate-inference.pdf][Clamping Variables and Approximate Inference]]
-  
+  - Nate Derbinsky, José Bento, Veit Elser, Jonathan S. Yedidia, [[https://arxiv.org/abs/1305.1961][An Improved Three-Weight Message-Passing Algorithm]], [[http://people.csail.mit.edu/andyd/CIOG_slides/yedidia_talk_ciog2011.pdf][slide]]
 
 - Linear Response. Welling and Teh, [[https://www.ics.uci.edu/~welling/publications/papers/LR2.pdf][Linear Response Algorithms for Approximate Inference in Graphical Models]]
 
@@ -83,6 +87,8 @@
 
 - Layered messages
   - Jampani et al, 2015, [[http://proceedings.mlr.press/v38/jampani15.pdf][Consensus Message Passing for Layered Graphical Models]]
+
+- Patrick Eschenfeldt, Dan Schmidt, Stark Draper, Jonathan Yedidia, 2016, [[https://arxiv.org/abs/1601.04667][Patrick Eschenfeldt, Dan Schmidt, Stark Draper, Jonathan Yedidia]]
 
 *** Application
 - [[https://papers.nips.cc/paper/9532-combining-generative-and-discriminative-models-for-hybrid-inference.pdf][Satorras, 2019, Combining Generative and Discriminative Models for Hybrid Inference]]
@@ -136,6 +142,7 @@ Graphical Neural Networks
 - Kingma, Dhariwal, 2018, [[https://arxiv.org/abs/1807.03039][Glow: Generative Flow with Invertible 1x1 Convolutions]]  
 - Dinh, Sohl-Dickstein, Bengio, 2017, [[https://arxiv.org/pdf/1605.08803.pdf][Density Estimation using Real NVP]]
 - Dinh, Krueger, Bengio, 2014, [[https://arxiv.org/abs/1410.8516][NICE: Non-linear independent component estimation]]  
+- Tran, 2019, [[http://papers.nips.cc/paper/9612-discrete-flows-invertible-generative-models-of-discrete-data.pdf][Discrete flows: Invertible generative models of discrete data]]
 - Inverse autoregreeeive flow as in previous subsection.
     
 
@@ -163,11 +170,15 @@ Learning of Directed Graphs
 - Mnih and Gregor, 2014, [[https://arxiv.org/abs/1402.0030][Neural Variational Inference and Learning in Belief Networks]]
 - NIPS tutorial 2016, [[https://media.nips.cc/Conferences/2016/Slides/6199-Slides.pdf][Variational Inference]]
 
+* course materials on pgm
+- [[http://www.cs.columbia.edu/~blei/fogm/2020F/index.html][Foundations of Graphical Models]]
+- [[https://sailinglab.github.io/pgm-spring-2019/][Probabilistic Graphical Models]]
 
 * PGM, Logic & Decision-making in Dynamic Systems
 ** Dynamics
 + Kim, Ahn, Bengio, 2019, [[https://arxiv.org/pdf/1910.00775.pdf][Variational Temporal Abstraction]]
 + Linderman et al, 2017, [[http://proceedings.mlr.press/v54/linderman17a/linderman17a.pdf][Bayesian Learning and Inference in Recurrent Switching Linear Dynamical Systems]]
++ Niall Twomey, Michal Kozlowski, Raul Santos-Rodriguez, 2020, [[http://ecai2020.eu/papers/736_paper.pdf][Neural ODEs with stochastic vector field mixtures]]
 
 ** Logic 
 - [[https://dtai.cs.kuleuven.be/problog/index.html][ProbLog]]
