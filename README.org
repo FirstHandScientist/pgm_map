@@ -1,4 +1,4 @@
-+TITLE: A Collection of Literature on Probabilistic Graphical Models
+#+TITLE: A Collection of Literature on Probabilistic Graphical Models
 #+LATEX_COMPILER: pdflatex
 #+options: toc:nil
 #+MACRO: color @@html:<font color="$1">$2</font>@@
@@ -47,6 +47,8 @@
 
 
 - Lee et al, 2019, EMP, [[https://arxiv.org/abs/1907.01127][Convergence rates of smooth message passing with rounding in entropy-regularized MAP inference]]
+- Knoll, et al, 2018, [[https://arxiv.org/abs/1605.06451][Fixed Points of Belief Propagation -- An Analysis via Polynomial Homotopy Continuation]]
+- Cheng Zhag, et al, 2018, [[https://arxiv.org/abs/1711.05597][Advances in Variational Inference]]
 - Fletcher, 2017, [[https://arxiv.org/abs/1602.07795][Expectation Consistent Approximate Inference: Generalizations and Convergence]]
 - Convergence Analysis, Roosta, 2008, [[https://ieeexplore.ieee.org/document/4599175][Convergence Analysis of Reweighted Sum-Product Algorithms]]
 - Generalized BP for marginal distributions, Yedidis, et al, 2005, [[https://www.cs.princeton.edu/courses/archive/spring06/cos598C/papers/YedidaFreemanWeiss2004.pdf][Constructing free energy approximations and Generalized belief propagation algorithms]]
@@ -109,6 +111,7 @@
 - Rezende, Mohamed, 2015, [[https://arxiv.org/abs/1505.05770][Variational Inference with Normalizing Flows]]
 
 - Domke, 2019, [[https://arxiv.org/abs/1901.08431][Provable Smoothness Guarantees for Black-Box Variational Inference]]
+- Zhang, et al, 2018, [[https://arxiv.org/pdf/1711.05597.pdf][Advances in Variational Inference]]
 - Blei, 2017, [[https://amstat.tandfonline.com/doi/pdf/10.1080/01621459.2017.1285773?needAccess=true][Variational Inference: A Review for Statisticians]]
 - Regier et al, 2017, [[https://papers.nips.cc/paper/6834-fast-black-box-variational-inference-through-stochastic-trust-region-optimization.pdf][Fast Black-box Variational Inferencethrough Stochastic Trust-Region Optimization]]
 - Kucukelbir et al, 2016, [[https://arxiv.org/pdf/1603.00788.pdf][Automatic differentiation variational inference]]
@@ -150,9 +153,12 @@ Graphical Neural Networks
 
 *** Parameter Learning
 
-    Learning graphical model parameters by approximate inference
-
+Alternative objective
+- Note, [[http://people.csail.mit.edu/dsontag/courses/pgm12/slides/pseudolikelihood_notes.pdf][Maximum Pseudolikelihood Learning]]
 - Domke, 2013, [[https://ieeexplore.ieee.org/abstract/document/6420841][Learning Graphical Model Parameters with Approximate Marginal Inference]]
+
+Learning graphical model parameters by approximate inference
+
 - Tang, 2015, [[https://arxiv.org/abs/1503.01228][Bethe Learning of Conditional Random Fields via MAP Decoding]]
 - You Lu, 2019, [[https://www.aaai.org/ojs/index.php/AAAI/article/view/4357][Block Belief Propagation for Parameter Learning in Markov Random Fields]]
 - Hazan, 2016, [[http://www.jmlr.org/papers/v17/13-260.html][Blending Learning and Inference in Conditional Random Fields]]
@@ -177,9 +183,12 @@ Learning of Directed Graphs
 * PGM, Logic & Decision-making in Dynamic Systems
 ** Dynamics
 + Kim, Ahn, Bengio, 2019, [[https://arxiv.org/pdf/1910.00775.pdf][Variational Temporal Abstraction]]
++ Yulia Rubanova et al 2019, [[https://arxiv.org/abs/1907.03907][Latent ODEs for Irregularly-Sampled Time Series]]
 + Linderman et al, 2017, [[http://proceedings.mlr.press/v54/linderman17a/linderman17a.pdf][Bayesian Learning and Inference in Recurrent Switching Linear Dynamical Systems]]
 + Niall Twomey, Michal Kozlowski, Raul Santos-Rodriguez, 2020, [[http://ecai2020.eu/papers/736_paper.pdf][Neural ODEs with stochastic vector field mixtures]]
-
++ Broderick, T. 2014, [[https://escholarship.org/content/qt9s76h6kh/qt9s76h6kh_noSplash_ae487ff77e18b03b243557a35e50f4a5.pdf][Clusters and features from combinatorial stochastic processes]]
++ VAswani, et al, 2014, [[https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf][Attention Is All You Need]]
++ Bahdanau, et al, 2014, [[https://arxiv.org/abs/1409.0473][Neural Machine Translation by Jointly Learning to Align and Translate]]  
 ** Logic 
 - [[https://dtai.cs.kuleuven.be/problog/index.html][ProbLog]]
   + D. Fierens, G. Van den Broeck, 2015. Inference and learning in probabilistic logic programs using weighted Boolean formulas.   

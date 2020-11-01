@@ -2,7 +2,18 @@
 
 * Reading
 
-+ From icml2020
+** From icml2020
+  - [X] Vahdat, *Undirected Graphical Models as Approximate Posteriors*
+    Any hint from CRF training for UGM training here?
+    Stein Variational methods in replacement of MCMC sampler?
+  - [X] Will, Learning the Stein Discrepancy for Training and Evaluating Energy-Based Models without Sampling 
+    Does this training need sampling or nor?
+    *model the f function by normalizing flow!*
+    Can this be used together to form the UGM-VAE?
+  - *All in the (Exponential) Family: Information Geometry and Thermodynamic Variational Inference*
+    The Thermodynamic Variational Objective, NeurIPS, 2019
+    Rob Brekelmans, Vaden Masrani, Frank Wood, Greg Ver Steeg, Aram Galstyan, 
+
   - [X] *Provable Smoothness Guarantees for Black-Box Variational Inference*
     Justin Domke (University of Massachusetts, Amherst)
   - [X] *Scaling up Hybrid Probabilistic Inference with Logical and Arithmetic Constraints via Message Passing*
@@ -13,10 +24,6 @@
 
   - [ ] Message Passing Least Squares: A Unified Framework for Fast and Robust Group Synchronization, 
     Yunpeng Shi (University of Minnesota) · Gilad Lerman (University of Minnesota)
-  - [X] Computational and Statistical Tradeoffs in Inferring Combinatorial Structures of Ising Model
-    Ying Jin (Stanford University) · Zhaoran Wang (Northwestern) · Junwei Lu ()
-  - [X] Sequential Cooperative Bayesian Inference
-    Junqi Wang (Rutgers University-Newark) · Pei Wang (Rutgers University-Newark) · Patrick Shafto (Rutgers University-Newark)
   - [ ] Doubly Stochastic Variational Inference for Neural Processes with Hierarchical Latent Variables
   Qi Wang (AMLAB, University of Amsterdam) · Herke van Hoof (University of Amsterdam)
 
@@ -69,12 +76,14 @@
 
 
 
-+ MAP inference
+** MAP inference
+  I should update this part of reference into pgm
+
   - [ ] *Accelerated Message Passing for Entropy-Regularized MAP Inference*, Jonathan Lee (UC Berkeley) · Aldo Pacchiano (UC Berkeley) · Peter Bartlett (UC Berkeley) · Michael Jordan (UC Berkeley)
 
   - [X] *Convergence rates of smooth message passing with rounding in entropy-regularized MAP inference*. J. Lee, A. Pacchiano, and M. I. Jordan. In R. Calandra and S. Chiappa (Eds.), Proceedings of the Twenty-Third Conference on Artificial Intelligence and Statistics (AISTATS), Palermo, Italy, 2020. 
 
-  - [X] Pradeep  Ravikumar,  Alekh  Agarwal,  and  Martin  JWainwright.  *Message-passing for graph-structuredlinear programs:  Proximal methods and roundingschemes* . Journal of Machine Learning Research, 11(Mar):1043–1080, 2010.
+  - [X] Pradeep  Ravikumar,  Alekh  Agarwal,  and  Martin  JWainwright.  *Message-passing for graph-structured linear programs:  Proximal methods and roundingschemes* . Journal of Machine Learning Research, 11(Mar):1043–1080, 2010.
     I should check the citations of this paper again. this is connected to 
     Jean-David Benamou, Guillaume Carlier, Marco Cu-turi, Luca Nenna, and Gabriel Peyr ́e.  Iterative Breg-man projections for regularized transportation prob-lems.SIAM Journal on Scientific Computing, 37(2):A1111–A1138, 2015
 
@@ -84,9 +93,9 @@
  
   - Message-Passing for Approximate MAP Inference with Latent Variables
   - 2011, MRF Energy Minimization and Beyond via Dual Decomposition
-  - [X] Tourani et al, 2018, [[https://hci.iwr.uni-heidelberg.de/vislearn/HTML/people/bogdan/publications/papers/tourani-mplp-plus-plus-eccv2018.pdf][MPLP++: Fast, Parallel Dual Block-Coordinate Ascent for Dense Graphical Models]]
+  - Savchynskyy, Scmidt, 2012, [[https://arxiv.org/abs/1210.4081][Getting Feasible Variable Estimates From Infeasible Ones: MRF Local Polytope Study]]
 
-+ AISTATS 2020
+** AISTATS 2020
   - [X] Approximate Inference in Discrete Distributions with Monte Carlo Tree Search and Value Functions, Lars Buesing (DeepMind)*; Nicolas Heess (DeepMind); Theophane Weber (DeepMind)
 
   - A Rule for Gradient Estimator Selection, with an Application to Variational Inference, Tomas Geffner (UMass Amherst)*; Justin Domke (UMass Amherst)
@@ -105,3 +114,7 @@
 
 + Others
   - [X] Blei, 2017, [[https://amstat.tandfonline.com/doi/pdf/10.1080/01621459.2017.1285773?needAccess=true][Variational Inference: A Review for Statisticians]]
+  - Zhuo, 2018, [[http://ml.cs.tsinghua.edu.cn/~jingwei/paper/icml18/poster.pdf][Message Passing Stein Variational Gradient Descent]]
+
+* Weighted model with message passing
+  - Zeng, 2020, [[https://arxiv.org/abs/2003.00126][Scaling up Hybrid Probabilistic Inference with Logical and Arithmetic Constraints via Message Passing]]
