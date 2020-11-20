@@ -163,6 +163,8 @@ Learning graphical model parameters by approximate inference
 - You Lu, 2019, [[https://www.aaai.org/ojs/index.php/AAAI/article/view/4357][Block Belief Propagation for Parameter Learning in Markov Random Fields]]
 - Hazan, 2016, [[http://www.jmlr.org/papers/v17/13-260.html][Blending Learning and Inference in Conditional Random Fields]]
 - Tang, etc, 2016, [[http://proceedings.mlr.press/v51/tang16a.pdf][Bethe Learning of Graphical Models via MAP Decoding]]
+- Ping and Ihler, 2017, [[http://proceedings.mlr.press/v54/ping17a/ping17a.pdf][Belief Propagation in Conditional RBMs for Structured Prediction]]
+- Ping, et al, 2014, [[http://proceedings.mlr.press/v32/ping14.pdf][Marginal Structured SVM with Hidden Variables]]
 
 Learning of MRF with neural networks
 
