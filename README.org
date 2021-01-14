@@ -12,6 +12,7 @@
 ** Books / Monograph:
    
 - Kingma and Welling, 2019, [[https://arxiv.org/abs/1906.02691][An Introduction to Variational Autoencoders]] 
+- Roger D. Peng, [[https://bookdown.org/rdpeng/advstatcomp/][Advanced Statistical Computing]] (in progress)
 - Sutton, 2010, [[https://homepages.inf.ed.ac.uk/csutton/publications/crftut-fnt.pdf][An Introduction to Conditional Random Fields]]
 - Wainwright, 2008, [[file:~/Documents/my_eBooks/mLearning/graphical_models_wainwright.pdf][Graphical Models, Exponential Families, and Variational Inference]]
 - Koller, 2009, [[file:~/Documents/my_eBooks/mLearning/probabilistic_graphical_models_principles_techniques.pdf][Probabilistic graphical models: principles and techniques]]
