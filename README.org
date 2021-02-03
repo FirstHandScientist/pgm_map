@@ -1,6 +1,6 @@
 #+TITLE: A Collection of Literature on Probabilistic Graphical Models
 #+LATEX_COMPILER: pdflatex
-#+options: toc:2
+#+options: toc:nil
 #+MACRO: color @@html:<font color="$1">$2</font>@@
 #+OPTIONS: timestamp:nil
 
@@ -12,6 +12,7 @@
 ** Books / Monograph:
    
 - Kingma and Welling, 2019, [[https://arxiv.org/abs/1906.02691][An Introduction to Variational Autoencoders]] 
+- D. Barber, 2012, [[http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage][Bayesian Reasoning and Machine Learning]]
 - Roger D. Peng, [[https://bookdown.org/rdpeng/advstatcomp/][Advanced Statistical Computing]] (in progress)
 - Sutton, 2010, [[https://homepages.inf.ed.ac.uk/csutton/publications/crftut-fnt.pdf][An Introduction to Conditional Random Fields]]
 - Wainwright, 2008, [[file:~/Documents/my_eBooks/mLearning/graphical_models_wainwright.pdf][Graphical Models, Exponential Families, and Variational Inference]]
