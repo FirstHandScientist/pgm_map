@@ -1,6 +1,6 @@
 #+TITLE: A Collection of Literature on Probabilistic Graphical Models
 #+LATEX_COMPILER: pdflatex
-#+options: toc:nil
+#+options: toc:2
 #+MACRO: color @@html:<font color="$1">$2</font>@@
 #+OPTIONS: timestamp:nil
 
