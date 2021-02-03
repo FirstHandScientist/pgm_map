@@ -129,6 +129,8 @@
 Learning messages
 
 - Heess et al, [[https://papers.nips.cc/paper/5070-learning-to-pass-expectation-propagation-messages.pdf][Learning to Pass Expectation Propagation Messages]], half-automated message passing, message-level automation
+- Kuck et al 2020, [[https://arxiv.org/pdf/2007.00295.pdf][Belief Propagation Neural Networks]]
+- Victor Garcia Satorras, Max Welling, 2020 [[https://arxiv.org/abs/2003.01998][Neural Enhanced Belief Propagation on Factor Graphs]]
 - Yoon et al, 2018, [[https://arxiv.org/abs/1803.07710][Inference in Probabilistic Graphical Models by Graph Neural Networks]]    
 - Lin, 2015, [[http://papers.nips.cc/paper/5791-deeply-learning-the-messages-in-message-passing-inference.pdf][Deeply Learning the Messages in Message Passing Inference]]
 
