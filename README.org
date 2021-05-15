@@ -211,7 +211,7 @@ Learning of Directed Graphs
 
 
 ** Decision-making
-+ Sutton, Barto, 2018, [[https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions][Reinforcement learning (2ed edition)]]
++ Sutton, Barto, 2018, [[https://github.com/FirstHandScientist/Reinforcement-Learning-2nd-Edition-by-Sutton-Exercise-Solutions][Reinforcement learning (2ed Edition)]]
 
 + Martin L. Puterman, 2014, Markov Decision Processes: Discrete Stochastic Dynamic Programming
 
