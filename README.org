@@ -51,16 +51,22 @@
 - Lee et al, 2019, EMP, [[https://arxiv.org/abs/1907.01127][Convergence rates of smooth message passing with rounding in entropy-regularized MAP inference]]
 - Knoll, et al, 2018, [[https://arxiv.org/abs/1605.06451][Fixed Points of Belief Propagation -- An Analysis via Polynomial Homotopy Continuation]]
 - Cheng Zhag, et al, 2018, [[https://arxiv.org/abs/1711.05597][Advances in Variational Inference]]
+- Peters, Janzing, Scholkopf, 2017, Elements of Causal Inference.
 - Fletcher, 2017, [[https://arxiv.org/abs/1602.07795][Expectation Consistent Approximate Inference: Generalizations and Convergence]]
+- Donoho, et al 2010, [[https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5503193][Message Passing Algorithms for Compressed Sensing: I. Motivation and Construction]]
+- Donoho, et al 2010, [[https://ieeexplore.ieee.org/document/5503228][Message passing algorithms for compressed sensing: II. analysis and validation]]
+
 - Convergence Analysis, Roosta, 2008, [[https://ieeexplore.ieee.org/document/4599175][Convergence Analysis of Reweighted Sum-Product Algorithms]]
 - Generalized BP for marginal distributions, Yedidis, et al, 2005, [[https://www.cs.princeton.edu/courses/archive/spring06/cos598C/papers/YedidaFreemanWeiss2004.pdf][Constructing free energy approximations and Generalized belief propagation algorithms]]
 - Tree-structured EP, Minka and Qi, [[https://tminka.github.io/papers/eptree/minka-eptree.pdf][Tree-structured approximations by expectation propagation]]
 - Winn & Bishop, 2005, [[http://www.jmlr.org/papers/volume6/winn05a/winn05a.pdf][Variational message passing]]
+- Welling, Minka, Teh, 2005, [[https://arxiv.org/abs/1207.1426][Structured Region Graphs: Morphing EP into GBP]]
+- Max Welling, 2004, [[https://arxiv.org/pdf/1207.4158.pdf][On the Choice of Regions for Generalized Belief Propagation]]
 - Opper, Winther, 2005, [[http://www.jmlr.org/papers/volume6/opper05a/opper05a.pdf][Expectation Consistent Approximate Inference]]
 - Wainwright et al, 2003, [[http://ssg.mit.edu/group/willsky/publ_pdfs/166_pub_AISTATS.pdf][tree-reweighted belief propagation algorithms and approximated ML esimation by pseudo-moment matching]]
+
+# MPA
 - Wainwright and Willsky, 2003, [[https://papers.nips.cc/paper/2206-exact-map-estimates-by-hypertree-agreement.pdf][Exact MAP estimates by hypertree agreement]]
-- Peters, Janzing, Scholkopf, 2017, Elements of Causal Inference.
- # MPA
 - Tourani et al, 2018, [[https://hci.iwr.uni-heidelberg.de/vislearn/HTML/people/bogdan/publications/papers/tourani-mplp-plus-plus-eccv2018.pdf][MPLP++: Fast, Parallel Dual Block-Coordinate Ascent for Dense Graphical Models]]
 - Haller et al, 2018, [[https://arxiv.org/abs/2004.06370][Exact MAP-Inference by Confining Combinatorial Search with LP Relaxation]]
 - Globerson, Jaakkola, 2008, [[https://papers.nips.cc/paper/3200-fixing-max-product-convergent-message-passing-algorithms-for-map-lp-relaxations.pdf][Fixing Max-Product: Convergent Message PassingAlgorithms for MAP LP-Relaxations]]
@@ -228,8 +234,14 @@ Learning of Directed Graphs
 - [[http://rail.eecs.berkeley.edu/deeprlcourse/][Deep Reinforcement Learning (CS285)]]
 - [[https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs][Advanced Deep Learning & Reinforcement Learning]]
 
-    
+** Platform     
+   + [[http://deepdive.stanford.edu/#documentation][DeepDive]]
+
 * In Connecting with Others
+** Causality
+   - Judea Pearl, Causality: Models, Reasoning and Inference
+   - [[https://github.com/DataForScience/Causality][Causality Tutorial Notebooks]]
+
 ** [[https://github.com/arranger1044/awesome-spn][Awesome Sum-Product Networks]]
 
 ** [[http://starai.cs.ucla.edu/code/][StarAI coll.]]
