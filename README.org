@@ -247,8 +247,8 @@ Learning of Directed Graphs
 ** [[http://starai.cs.ucla.edu/code/][StarAI coll.]]
 
 ** Repos on Variational Inference
-+ Repos: [[https://github.com/otokonoko8/implicit-variational-inference][Advanced-variational-inference-paper]]
-+ Repos: [[https://github.com/otokonoko8/deep-Bayesian-nonparametrics-papers][Deep-Bayesian-nonparametrics-papers]] 
+- Repos: [[https://github.com/otokonoko8/implicit-variational-inference][Advanced-variational-inference-paper]]
+- Repos: [[https://github.com/otokonoko8/deep-Bayesian-nonparametrics-papers][Deep-Bayesian-nonparametrics-papers]] 
 
 
   
